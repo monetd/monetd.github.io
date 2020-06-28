@@ -1,5 +1,5 @@
 ---
-title:  "github.io 블로그 시작하기"
+title:  "github.io 블로그 이상 중"
 excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
 categories:
   - blog
@@ -7,15 +7,14 @@ tags:
   - Blog
   - Test
   - Test2
-last_modified_at: 2020-06-28T20:18:00
+last_modified_at: 2020-06-28
 ---
 
-GitHub Blog 서비스인 github.io 블로그 시작하기로 했다.
-GitHub Blog 서비스의 이름은 Pages이다.
+기존 쓰던 jekyll 테마를 변경하기 위해 블로그를 통째로 이사중이다.
 
-Pages가 다른 블로그 플랫폼 보다 편한 것 같아서 마음에 든다.
-다른 사람들도 같이 많이 사용했으면 좋겠다는 생각이 든다.
+이사란 표현이 맞는 지는 모르겠지만.. Repository를 옮기는 중이니까.
 
-YFM에서 정의한 제목을 이중 괄호 구문으로 본문에 추가할 수 있다.
-이 글의 제목은 {{ page.title }}이고
-마지막으로 수정된 시간은 {{ page.last_modified_at }}이다.
+많은 기술블로그에서 쓰는 테마를 따라쓰기로 했다.
+지원되는 기능도 많고 무엇보다 가독성이 좋다.
+
+조금 더 만져봐야 겠다..
