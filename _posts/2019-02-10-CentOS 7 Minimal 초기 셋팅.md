@@ -21,7 +21,7 @@ CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치�
 
 ### Step 1. CentOS 7 Minimal ISO 다운로드
 
-![CentOS 7 Minimal ISO Download Page]({{ "/static/posts/20190210/figure1.png"| absolute_url }})
+![CentOS 7 Minimal ISO Download Page]({{site.url}}/assets/images/2019/02/figure1.png)
 
 *CentOS 7 Minimal ISO Download Page*
 
@@ -31,8 +31,8 @@ CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치�
 
 ### Step 2. 설치
 
-![CentOS 7 Minimal 설치]({{ "/static/posts/20190210/figure2.png"| absolute_url }})
-![CentOS 7 Minimal 설치]({{ "/static/posts/20190210/figure3.png"| absolute_url }})
+![CentOS 7 Minimal 설치]({{site.url}}/assets/images/2019/02/figure2.png)
+![CentOS 7 Minimal 설치]({{site.url}}/assets/images/2019/02/figure3.png)
 
 *CentOS 7 설치 과정*
 
@@ -44,7 +44,7 @@ CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치�
 
 설치를 마치고 root 계정으로 로그인 (혹은 일반 계정으로 로그인 후, sudo 를 이용하여 작업하여도 무방하다. sudo 설정은 생략)
 
-![CentOS 7 Login]({{ "/static/posts/20190210/figure4.png"| absolute_url }})
+![CentOS 7 Login]({{site.url}}/assets/images/2019/02/figure4.png)
 
 ```bash
 $ vi /etc/sysconfig/network-scripts/ifcfg-enpXXX

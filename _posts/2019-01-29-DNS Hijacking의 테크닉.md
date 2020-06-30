@@ -24,7 +24,7 @@ TCP의 핸드쉐이크 과정이나 헤더 구조, 오버헤드 등 이런 단�
 상호인증 없이 데이터를 주고 받는 것으로 인해 생기는 태생적인 취약점이라고 본다.
 (대체로 DDoS, DRDoS 등 현재의 네트워크 공격은 대다수 UDP 기반으로 이루어지고 있다.)
 
-![tcp_udp_headers]({{ "/static/posts/20190129/tcp_udp_headers.jpg"| absolute_url }})
+![tcp_udp_headers]({{site.url}}/assets/images/2019/01/tcp_udp_headers.jpg)
 
 *TCP와 UDP의 헤더 구조... 딱 봐도 UDP가 Simple 해보인다.*
 
@@ -37,7 +37,7 @@ TCP의 핸드쉐이크 과정이나 헤더 구조, 오버헤드 등 이런 단�
 
 ### Step 1. DNS A Records 변조
 
-![Figure1b]({{ "/static/posts/20190129/Figure1b.png"| absolute_url }})
+![Figure1b]({{site.url}}/assets/images/2019/01/Figure1b.jpg)
 
 *공격자가 DNS 관리자의 관리자 계정에 접근하여 A record 변경*
 
@@ -54,7 +54,7 @@ TCP의 핸드쉐이크 과정이나 헤더 구조, 오버헤드 등 이런 단�
 
 ### Step 2. DNS NS Records 변조
 
-![Figure2]({{ "/static/posts/20190129/Figure2.png"| absolute_url }})
+![Figure2]({{site.url}}/assets/images/2019/01/Figure2.png)
 
 *공격자가 TLD 등록업체를 해킹하여 NS record 변경*
 
@@ -71,7 +71,7 @@ TCP의 핸드쉐이크 과정이나 헤더 구조, 오버헤드 등 이런 단�
 
 ### Step 3. DNS Redirector
 
-![Figure3]({{ "/static/posts/20190129/Figure3.png"| absolute_url }})
+![Figure3]({{site.url}}/assets/images/2019/01/Figure3.png)
 
 *DNS 요청을 모니터링하다 타깃 도메인에 접근 시 공격자가 관리하는 IP로 변조하여 회신*
 
