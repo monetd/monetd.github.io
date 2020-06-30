@@ -1,6 +1,6 @@
 ---
 title: "Posts by Tech"
-layout: archive
+layout: tags
 permalink: /tech/
 author_profile: true
 ---
