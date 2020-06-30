@@ -23,20 +23,20 @@ last_modified_at: 2019-01-10
 먼저 해야할 것은 [insecam](https://www.insecam.org/)이라는 웹 사이트에 공개되어 있는
 IP카메라 중, 특정 ISP의 IP와 취약한 URI를 뽑아내는 것이였다.
 
-![insecam]({{site.url}}/assets/images/2019/01/insecam.PNG)
+![insecam]({{site.url}}/assets/images/2019/01/insecam.png)
 
 *국가 단위로는 다음과 같이 제공이 되어서, 일단 국내단말만 추릴 수 있었다. 총 528개의 단말이 공개되어 있는 모양이다.*
 
 하지만 이 다음이 문제였다. 일단 제공되는 UI와 진리(?)의 소스보기와 요소검사를 통해 해당 페이지의 DOM 구조를 파악하자.
 
-![insecam]({{site.url}}/assets/images/2019/01/insecam2.PNG)
+![insecam]({{site.url}}/assets/images/2019/01/insecam2.png)
 
 *UI는 위와 같이 한 페이지에 6개의 화상 화면이 출력된다. 총 88페이지 까지 있다.*
 
 이것을 수동으로 소스보기에서 하나하나 IP와 URI를 따오기는 인고의 시간이다.
 머신의 힘을 이용하길 하고 소스보기를 통해 패턴을 본다.
 
-![insecam]({{site.url}}/assets/images/2019/01/insecam3.PNG)
+![insecam]({{site.url}}/assets/images/2019/01/insecam3.png)
 
 *각자의 `<div>`에 `<img>` 엘리먼트 들이 들어있다. 어떻게 가져와야 할까 고민하던 도중 각자의 `<img>`가
 `thumbnail-item__img img-responsive`라는 이름의 동일한 class를 가지고 있던것을 확인하였다.*
@@ -88,11 +88,11 @@ if __name__ == "__main__":
 
 User-Agent를 대충 지정해주고 나니 성공적으로 200 OK 응답이 떨어지고 코드가 돌았다.
 
-![insecam]({{site.url}}/assets/images/2019/01/insecam4.PNG)
+![insecam]({{site.url}}/assets/images/2019/01/insecam4.png)
 
 kr_iplist.txt 라는 파일로 떨궈져서 해당 파일을 열어보니 성공적으로 IP와 URI 리스트를 얻을 수 있었다.
 `openpyxl`이나 `xlrd`등의 패키지를 이용하여서 정밀하게 엑셀로 출력하는 방법도 있을 것이다.
 
 나는 급하게 리스트 확보가 중요하였기 때문에 그냥 txt로 작업을 하였다.
 
-![insecam]({{site.url}}/assets/images/2019/01/insecam5.PNG)
+![insecam]({{site.url}}/assets/images/2019/01/insecam5.png)
