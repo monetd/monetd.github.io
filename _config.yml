@@ -279,14 +279,3 @@ defaults:
       comments: # true
       share: true
       related: true
-  # _techs
-  - scope:
-      path: ""
-      type: techs
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true

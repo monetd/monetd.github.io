@@ -3,11 +3,11 @@ title:  "CentOS 7 Minimal 초기 셋팅"
 excerpt: "업무를 하면서 서버를 다룰일은 거의 없지만, 보통 필요한 서버를 구축할때에는
 CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치하는 편이다."
 categories:
-  - tech
-tags:
   - Linux
-  - Server
+tags:
+  - Tech
   - CentOS
+  - '2019'
 last_modified_at: 2019-02-10
 ---
 

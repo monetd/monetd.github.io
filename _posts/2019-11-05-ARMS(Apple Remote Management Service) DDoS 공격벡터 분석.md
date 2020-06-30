@@ -2,12 +2,11 @@
 title:  "ARMS(Apple Remote Management Service) DDoS 공격벡터 분석"
 excerpt: "최근 해외 다수 금융권을 대상으로 러시아 해킹그룹인 `Fency Bear`로 위장한 해킹그룹에 의한 비트코인을 요구하는 디도스 공격이 발생하고 있다는 기사를 보게 되었다."
 categories:
-  - tech
+  - Network Security
 tags:
   - Tech
-  - Network
-  - Security
   - DDoS
+  - '2019'
 last_modified_at: 2019-11-05
 ---
 

@@ -4,10 +4,10 @@ main:
     url: /
   - title: "About"
     url: /about/
-  - title: "Tech"
-    url: /tech/
-  - title: "Blog"
-    url: /blog/
+  - title: "Category"
+    url: /categories/
+  - title: "Post"
+    url: /posts/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"

@@ -2,11 +2,12 @@
 title:  "asciinema를 이용해 터미널 화면 녹화하기"
 excerpt: "포스팅을 하다보면 소스코드나 실행결과를 업로드 해야 할 경우가 있는데 그떄 쓰면 유용한 툴을 하나 찾게 되어서 포스팅해보고자 한다."
 categories:
-  - tech
+  - Tools
 tags:
   - Tech
-  - Linux
+  - Shell
   - Asciinema
+  - '2019'
 last_modified_at: 2019-12-04
 ---
 
