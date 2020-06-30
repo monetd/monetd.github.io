@@ -1,6 +1,8 @@
 ---
 title:  "DNS Water Torture 공격에 대하여(PRSD)"
 excerpt: "`DNS Water Torture` 통칭 DNS 물고문(?) 공격에 대해 포스팅을 해보려고 한다."
+toc: true
+toc_sticky: true
 categories:
   - Network Security
 tags:
