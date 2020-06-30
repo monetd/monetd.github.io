@@ -37,7 +37,7 @@ TCP의 핸드쉐이크 과정이나 헤더 구조, 오버헤드 등 이런 단�
 
 ### Step 1. DNS A Records 변조
 
-![Figure1b]({{site.url}}/assets/images/2019/01/Figure1b.jpg)
+![Figure1b]({{site.url}}/assets/images/2019/01/Figure1b.png)
 
 *공격자가 DNS 관리자의 관리자 계정에 접근하여 A record 변경*
 
