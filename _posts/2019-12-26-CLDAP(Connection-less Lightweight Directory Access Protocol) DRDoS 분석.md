@@ -1,8 +1,15 @@
 ---
-layout: post
 title:  "CLDAP(Connection-less Lightweight Directory Access Protocol) DRDoS 분석"
-date:   2019-12-26
-categories: [network, security, ddos]
+excerpt: "`CLDAP DRDoS 공격`은 `DNS 증폭공격` 과 더불어망내에서 흔히 볼 수 있는.. 아주 클래식(?)한 DRDoS 공격이다."
+categories:
+  - tech
+tags:
+  - Tech
+  - Network
+  - Security
+  - DDoS
+  - '2019'
+last_modified_at: 2019-12-26
 ---
 
 `CLDAP DRDoS 공격`은 `DNS 증폭공격` 과 더불어망내에서 흔히 볼 수 있는.. 아주 클래식(?)한 DRDoS 공격이다.

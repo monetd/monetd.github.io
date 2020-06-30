@@ -1,11 +1,18 @@
 ---
-layout: post
 title:  "CentOS 7 Minimal 초기 셋팅"
-date:   2019-02-10
-categories: [linux, server, centos]
+excerpt: "업무를 하면서 서버를 다룰일은 거의 없지만, 보통 필요한 서버를 구축할때에는
+CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치하는 편이다."
+categories:
+  - tech
+tags:
+  - Linux
+  - Server
+  - CentOS
+  - '2019'
+last_modified_at: 2019-02-10
 ---
 
-업무를 하면서 서버를 다룰일 은 거의 없지만, 보통 필요한 서버를 구축할때에는
+업무를 하면서 서버를 다룰일은 거의 없지만, 보통 필요한 서버를 구축할때에는
 CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치하는 편이다.
 
 참고로 CentOS 6와 CentOS 7은 많은 [차이점](https://www.lesstif.com/pages/viewpage.action?pageId=22053120)을 가지고 있는데, `systemctl` 로 서비스를 제어하는 것과 `firewalld`
@@ -13,7 +20,7 @@ CentOS 7 최소 버전으로 설치하는 후에 필요한 패키지를 설치�
 
 항상 서버를 셋팅하면서 잊어먹게 되어 이곳에 따로 기록을 해두려고 한다.
 
-### Step 1. CentOS 7 Minimal ISO 다운로드 
+### Step 1. CentOS 7 Minimal ISO 다운로드
 
 ![CentOS 7 Minimal ISO Download Page]({{ "/static/posts/20190210/figure1.png"| absolute_url }})
 
@@ -45,7 +52,7 @@ $ vi /etc/sysconfig/network-scripts/ifcfg-enpXXX
 ```
 
 #### 고정 IP 설정
-```bash                                                                                               
+```bash
 TYPE=Ethernet
 BOOTPROTO=none      # BOOTPROTE를 static에서 none으로 변환
 DEFROUTE=yes
@@ -67,7 +74,7 @@ IPADDR=10.20.30.41
 NETMASK=255.255.255.0
 GATEWAY=10.20.30.254
 DNS1=168.126.63.1
-DNS2=168.126.63.2                               
+DNS2=168.126.63.2
 ```
 #### 유동 IP(DHCP) 설정
 ```bash
@@ -76,7 +83,7 @@ ONBOOT=yes      # ONBOOT를 no에서 yes로 변경 후 저장
 ...
 ```
 ```bash
-$ systemctl restart network     
+$ systemctl restart network
 $ systemctl restart NetworkManager
 ```
 
@@ -104,7 +111,7 @@ $ yum -y update
 $ yum install make gcc kernel-headers kernel-devel perl dkms bzip2
 ```
 
-`KERN_DIR` 환경 변수를 설정하여 준다. 
+`KERN_DIR` 환경 변수를 설정하여 준다.
 ```bash
 $ export KERN_DIR=/usr/src/kernels/$(uname -r)
 ```
@@ -127,7 +134,7 @@ $ reboot
 
 ### Step 6. 네트워크 도구 설치
 
-`ping`이나 `traceroute` 같은 네트워크 디버깅이 가능한 툴을 설치해준다. 
+`ping`이나 `traceroute` 같은 네트워크 디버깅이 가능한 툴을 설치해준다.
 보통 있는 줄 알았는데.. minimal 버전에는 포함이 되어있지 않은 것 같다.
 ```bash
 $ yum install -y net-tools

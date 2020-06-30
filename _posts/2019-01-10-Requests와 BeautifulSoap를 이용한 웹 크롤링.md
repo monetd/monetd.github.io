@@ -1,8 +1,13 @@
 ---
-layout: post
 title:  "Requests와 BeautifulSoap를 이용한 웹 크롤링"
-date:   2019-01-10
-categories: [python, crawling, tech]
+excerpt: "작년의 마지막 3회차 CPPG 시험에 합격하게 되어서 늦게나마 후기를 남겨본다."
+categories:
+  - tech
+tags:
+  - Python
+  - Crawling
+  - '2019'
+last_modified_at: 2019-01-10
 ---
 
 업무를 하면서 사무자동화나 분석업무에 Python을 많이 활용하게 된다.

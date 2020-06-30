@@ -1,8 +1,15 @@
 ---
-layout: post
 title:  "DNS Water Torture 공격에 대하여(PRSD)"
-date:   2019-10-15
-categories: [network, security, ddos]
+excerpt: "`DNS Water Torture` 통칭 DNS 물고문(?) 공격에 대해 포스팅을 해보려고 한다."
+categories:
+  - tech
+tags:
+  - Tech
+  - Network
+  - Security
+  - DDoS
+  - '2019'
+last_modified_at: 2019-10-15
 ---
 
 `DNS Water Torture` 통칭 DNS 물고문(?) 공격에 대해 포스팅을 해보려고 한다. 단순하면서도 상당히 매력적인(?) 공격이라고 생각한다. 실제로 관제업무를 수행하면서 많이 대응해보기도 했고... `DNS Water Toruture` 이라는 명칭도 있지만 `PRSD(Pseudo Random Subdomain) 공격`이라는 명칭이 더욱 직관적으로 들리기도 한다.

@@ -1,8 +1,14 @@
 ---
-layout: post
 title:  "DNS Hijacking의 테크닉"
-date:   2019-01-29
-categories: [network, security]
+excerpt: "'DNS Hijacking'은 DNS 트래픽에 대한 납치를 뜻한다. DNS는 단순히 도메인 명을 IPv4 형태 혹은 IPv6 형태의 주소로
+변경해주는 단순한 서비스지만, 해당 서비스가 마비된다면 인터넷이 마비되어 버리는 재앙이 도레하기에 굉장히 치명적이라고 할 수 있다."
+categories:
+  - tech
+tags:
+  - Network
+  - Security
+  - '2019'
+last_modified_at: 2019-01-29
 ---
 
 '하이재킹'이란 보통 교통 수단에 대한 납치 행위를 뜻한다.
