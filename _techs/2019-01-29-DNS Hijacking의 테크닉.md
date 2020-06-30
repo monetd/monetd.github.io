@@ -7,7 +7,6 @@ categories:
 tags:
   - Network
   - Security
-  - '2019'
 last_modified_at: 2019-01-29
 ---
 

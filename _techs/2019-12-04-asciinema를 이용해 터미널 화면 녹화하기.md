@@ -7,7 +7,6 @@ tags:
   - Tech
   - Linux
   - Asciinema
-  - '2019'
 last_modified_at: 2019-12-04
 ---
 

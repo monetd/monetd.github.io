@@ -8,7 +8,6 @@ tags:
   - Network
   - Security
   - DDoS
-  - '2019'
 last_modified_at: 2019-11-05
 ---
 
