@@ -12,8 +12,8 @@ last_modified_at: 2019-10-15
 
 `DNS Water Torture` 통칭 DNS 물고문(?) 공격에 대해 포스팅을 해보려고 한다. 단순하면서도 상당히 매력적인(?) 공격이라고 생각한다. 실제로 관제업무를 수행하면서 많이 대응해보기도 했고... `DNS Water Toruture` 이라는 명칭도 있지만 `PRSD(Pseudo Random Subdomain) 공격`이라는 명칭이 더욱 직관적으로 들리기도 한다.
 
-![zdnet_mirai_ddos]({{site.url}}/static/images/2019/11/zdnet-mirai-ddos.png)
-![amazone_s3_ddos]({{site.url}}/static/images/2019/11/amazone-s3-ddos.png)
+![zdnet_mirai_ddos]({{site.url}}/assets/images/2019/11/zdnet-mirai-ddos.png)
+![amazone_s3_ddos]({{site.url}}/assets/images/2019/11/amazone-s3-ddos.png)
 *출처(상) : [Mirai DNS Water Torture finance sector attack dominated Q1: Akamai
 ](https://www.zdnet.com/article/mirai-dns-water-torture-finance-sector-attack-dominated-q1-akamai/){: target="_blank"}*
 *출처(하) : [Bezos DDoS'd: Amazon Web Services' DNS systems knackered by hours-long cyber-attack
@@ -28,7 +28,7 @@ last_modified_at: 2019-10-15
 
 만약 우리가 네이버쇼핑을 이용하려고 한다고 가정해보자. 가장 먼저 브라우저를 띄우고 URL창에 `shopping.naver.com`을 입력할 것이다. 그러면 우리의 PC는 설정되어 있는 DNS 서버(여기서는 KT DNS인 168.126.63.1)에게 해당 도메인에 맵핑된 IP가 무엇인지 물어 볼 것이다. PC에게 질의를 받은 Cache DNS는 자신이 `shopping.naver.com`에 대한 IP를 가지고 있다면 A Record 값으로 물어본 클라이언트에게 답을 줄 것이다. 하지만 없다면 상위 레벨의 DNS로 iterative하게 질의를 하게 된다. 간단히 그림으로 그려보면 아래와 같다.
 
-![dns_request_flow]({{site.url}}/static/images/2019/11/dns-request-flow.png)
+![dns_request_flow]({{site.url}}/assets/images/2019/11/dns-request-flow.png)
 
 1. 내 PC 에서 `shopping.naver.com` (설정된)KT DNS로 질의
 2. KT DNS는 root DNS에 질의
@@ -159,22 +159,22 @@ shopping.naver.com.nheos.com. 180 IN	A	117.52.137.140
 제일 먼저, 질의를 받은 Cache DNS는 Root DNS를 시작으로 모든 상위 DNS를 순회할 것이다. 자신에게 그런 값의 도메인은 없기 때문이다. 그리고 최종적인 질의를 받은 해당 도메인의 네임서버
  당연히 해당 도메인에 대한 IP가 없다는 NXDOMAIN 값을 줄 것이다.
 
-![nxdomain_flow]({{site.url}}/static/images/2019/11/nxdomain-flow.png)
+![nxdomain_flow]({{site.url}}/assets/images/2019/11/nxdomain-flow.png)
 
 하지만 이러한 없는 도메인을 한꺼번에 다량으로 퍼붙게 된다면, 해당 도메인의 네임서버의 응답률은 급격히 저하되게 된다. 일종의 `Dos(Denial of Service)`가 되는 것이다. 응답을 받지 못한 Cache DNS는 자신이 보낸 요청이 중간에 소실된 것으로 생각되고 지속적으로 해당 도메인의 네임서버에 요청을 보내게 된다. 더불어 불필요하게 `iterative request(상위 DNS서버에 계속 질의하는 행위)`를 반복하게 되어 Cache DNS 자체의 성능에도 영향을 미치게 된다.
 
 공격자는 이 점을 이용하여 다량의 랜덤스트링 값의 서브도메인을 생성하여 해당 도메인을 공격하게 된다. 공격 대상이 되는 도메인의 네임서버가 마비됨은 물론 ISP의 Cache DNS까지 마비가 될 수 있는 공격이기에 매우 치명적이다.
 
-![dns_watertorture_attack]({{site.url}}/static/images/2019/11/dns-watertorture-attack.png)
+![dns_watertorture_attack]({{site.url}}/assets/images/2019/11/dns-watertorture-attack.png)
 
-![dns_water_torture_attack_packet]({{site.url}}/static/images/2019/11/Screen Shot 2019-11-14 at 3.49.38 PM.png)
+![dns_water_torture_attack_packet]({{site.url}}/assets/images/2019/11/Screen Shot 2019-11-14 at 3.49.38 PM.png)
 *실제 공격발생 시 패킷, `s3.amazonaws.com`에 대한 공격이다.*
 
 물론 공격자는 취약한 IoT 장비 감염시켜 봇넷으로 만든 뒤 해당 봇넷에서 인터넷에 Open 되어 있는 Resolver를 통해 공격을 하게 된다.(주로 `DNS Relay` 기능이 있는 유/무선 공유기)
 
 * *DNS Relay : 해당 유/무선 공유기가 마치 DNS Cache 서버처럼 동작하게 된다.**
 
-![akamai_report]({{site.url}}/static/images/2019/11/Screen Shot 2019-11-14 at 5.43.24 PM.png)
+![akamai_report]({{site.url}}/assets/images/2019/11/Screen Shot 2019-11-14 at 5.43.24 PM.png)
 *Akamai 보고서 중 DNS Water Torture 공격 Flow*
 
 실제로 2016년 Mirai 악성코드에 감염된 IoT 장비들이 Dyn사의 DNS를 공격에 트위터 등 여러 IT 기업들의 서비스들이 마비되었던 사례가 있다.

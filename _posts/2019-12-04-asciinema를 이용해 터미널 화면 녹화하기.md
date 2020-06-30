@@ -13,7 +13,7 @@ last_modified_at: 2019-12-04
 
 포스팅을 하다보면 소스코드나 실행결과를 업로드 해야 할 경우가 있는데 그떄 쓰면 유용한 툴을 하나 찾게 되어서 포스팅해보고자 한다.
 
-![asciinema_main]({{site.url}}/static/images/2019/12/asciinema-main.png)
+![asciinema_main]({{site.url}}/assets/images/2019/12/asciinema-main.png)
 *asciinema*
 
 바로 [asciinema](https://asciinema.org/){: target="_blank"}라는 툴이다. 기능은 매우 Simple하다. 터미널에서 내가 타이핑한 내용과 출력물들을 모두 녹화해주고, 업로드 후에 공유할 수 있다.
@@ -114,13 +114,13 @@ $ asciinema auth
 생성된 링크로 들어가보면 게시물의 제목과 설명 그리고 출력되는 쉘의 종류와 썸네일을 설정할 수 있다.
 
 
-![settings_page]({{site.url}}/static/images/2019/12/settings-page.png)
+![settings_page]({{site.url}}/assets/images/2019/12/settings-page.png)
 
 
 공유도 HTML은 물론 마크다운으로도 공유할 수 있게 제공된다.
 
 
-![share_option]({{site.url}}/static/images/2019/12/share-option.png)
+![share_option]({{site.url}}/assets/images/2019/12/share-option.png)
 
 
 이외에 명령어에 대한 상세한 사용법은 [문서](https://asciinema.org/docs/usage){:target="_blank"}를 참고하자.

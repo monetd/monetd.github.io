@@ -13,7 +13,7 @@ last_modified_at: 2019-12-26
 `CLDAP DRDoS 공격`은 `DNS 증폭공격` 과 더불어망내에서 흔히 볼 수 있는.. 아주 클래식(?)한 DRDoS 공격이다.
 본인의 기억으로 최초로 해당 공격을 대응해봤던 건 2017년 중순 가량이였다. 소스포트가 `UDP 389`인 처음보는 유형의 DRDoS여서 근무 중 당황했던 기억이 난다. 이후 외부의 분석보고서나 뉴스를 찾아보면 대략 `50~70%`의 증폭률을 보여준다고 하니 효율적인 공격벡터라 할 수 있겠다.
 
-![cldap_boan_article]({{site.url}}/static/images/2019/12/cldap-boan-article.png)
+![cldap_boan_article]({{site.url}}/assets/images/2019/12/cldap-boan-article.png)
 *[새로운 디도스 공격의 통로, CLDAP의 놀라운 증폭률](https://www.boannews.com/media/view.asp?idx=54258&direct=mobile){: target="_blank"}*
 
 친절하게도 [RFC1798](https://tools.ietf.org/html/rfc1798){: target="_blank"} 이 공개되어 있으니 공격 패킷과 프로토콜 구조를 중점으로 분석해보기로 하자. (이전의 ARMS DDoS 분석과정에 비하면 매우 수월하다...)
@@ -30,32 +30,32 @@ LDAP (위키백과)
 디렉터리는 논리, 계급 방식 속에서 조직화된, 비슷한 특성을 가진 객체들의 모임이다. 가장 일반적인 예로는 전화 번호부(telephone directory)가 있는데 가나다 순의 일련의 이름을 가지고 있고, 이름마다 전화 번호와 주소가 포함되어 있다. 이러한 기본 설계 때문에 LDAP는 인증을 위한 다른 서비스에 의해 자주 사용된다.
 ```
 
-![ldap_images]({{site.url}}/static/images/2019/12/ldap-images.png)
+![ldap_images]({{site.url}}/assets/images/2019/12/ldap-images.png)
 * 출처 : [SecurityWiki - LDAP](https://doubleoctopus.com/security-wiki/protocol/lightweight-directory-access-protocol/){: target="_blank"}
 
 LDAP 프로토콜은 `SSO(Single Sign On)`이나 `AD(Active Directory)`에 사용된다. LDAP은 TCP 위에서 동작하기 때문에 어느 정도의 TCP 연결 자원을 소모하게 된다. 이를 개선하기 위해 IETF에서 1995년에 나온 것이 `CLDAP`이다.
 
 `CLDAP`은 `searchRequest`, `searchResponse(searchResEntry, searchResDone)`, `abandonRequest` 3가지 기능만을 제공하여 UDP 위에서 동작하기 때문에 사용자 인증을 제공하지 않고 LDAP 서버 389 포트에 대한 작업 요청을 시작할 수 있다. 클라이언트가 `searchRequest`를 발생시킨 경우 서버는 searchResEntry와 searchResDone 두개의 응답메세지를 반환하고 일반적인 경우 이러한 작업은 작은 요청패킷으로도 큰 응답패킷을 주는 증폭효과를 주게 된다. 따라서 이러한 취약점을 DDoS 공격에 이용하는 것이다.
 
-![cldap_protocol_spec]({{site.url}}/static/images/2019/12/cldap-protocol-spec.png)
+![cldap_protocol_spec]({{site.url}}/assets/images/2019/12/cldap-protocol-spec.png)
 *CLDAP Protocol 구조*
 
 현재 포스팅 작성 시간 기준(2019-12-26)으로 shodan에 오픈된 389 포트 검색 결과 국내에는 `2,022`개의 오픈된 LDAP 단말들이 나온다.
 
-![shodan_open_389]({{site.url}}/static/images/2019/12/shodan-open-389.png)
+![shodan_open_389]({{site.url}}/assets/images/2019/12/shodan-open-389.png)
 *Shodan에 노출된 국내 LDAP 서버들*
 
 ### 공격패킷 분석
 
 실제 공격발생 시, 발생된 패킷들을 살펴보았다.
 
-![cldap_attack_packet]({{site.url}}/static/images/2019/12/캡처.PNG)
+![cldap_attack_packet]({{site.url}}/assets/images/2019/12/캡처.PNG)
 *CLDAP DRDoS 공격 Request패킷*
 
 앞서 적은 것처럼 searchRequest 패킷을 다수의 랜덤 IP로 뿌리는 것을 확인할 수 있었다.
 Request 패킷은 93 Bytes 로 간단한 프로토콜 구조로 보인다.
 
-![ldap_attack_response_packet]({{site.url}}/static/images/2019/12/Screen Shot 2019-12-29 at 9.14.06 PM.png)
+![ldap_attack_response_packet]({{site.url}}/assets/images/2019/12/Screen Shot 2019-12-29 at 9.14.06 PM.png)
 *CLDAP DRDoS 공격 Response 패킷*
 
 응답패킷의 경우는 Fregment된 형태로 오는 것을 확인할 수 있다. 취약점이 있는 서버는 `rootDSE`의 항목 및 항목 속성과 같은 모든 구성정보를 리턴하기 되므로 응답패킷의 사이즈가 매우 커짐을 알 수 있다. (위의 경우는 **1514+1514+99 Bytes** 로 3,127 Bytes이며 증폭률은 약 **33배** 정도로 보인다.)
@@ -192,13 +192,13 @@ NTP Monlist 공격과 비슷하게 서버의 구성정보를 모두 리턴하는
 
 가장 중요한 것은 불필요한 포트를 외부에 오픈하지 않는 것이다. CLDAP의 경우 외부접근이 필요한 서비스로 보이지 않으므로 반드시 내부망에서만 사용하는것이 바람직 할 것이다. 아래는 `공격을 유발하는 패킷(Request)의 패턴`과 `응답되어 오는 패킷(Response)의 패턴`을 정리해보았다.
 
-![searchRequst_pattern]({{site.url}}/static/images/2019/12/Screen Shot 2019-12-29 at 10.22.25 PM.png)
+![searchRequst_pattern]({{site.url}}/assets/images/2019/12/Screen Shot 2019-12-29 at 10.22.25 PM.png)
 *CLDAP DRDoS Request 패킷 패턴(searchRequest)*
 
-![searchResRentry_pattern]({{site.url}}/static/images/2019/12/Screen Shot 2019-12-29 at 10.24.51 PM.png)
+![searchResRentry_pattern]({{site.url}}/assets/images/2019/12/Screen Shot 2019-12-29 at 10.24.51 PM.png)
 *CLDAP DRDoS Response 패킷 패턴(searchResEntry)*
 
-![searchResDone_pattern]({{site.url}}/static/images/2019/12/Screen Shot 2019-12-29 at 10.24.01 PM.png)
+![searchResDone_pattern]({{site.url}}/assets/images/2019/12/Screen Shot 2019-12-29 at 10.24.01 PM.png)
 *CLDAP DRDoS Response 패킷 패턴(searchResDone)*
 
 
