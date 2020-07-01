@@ -51,7 +51,7 @@ LDAP 프로토콜은 `SSO(Single Sign On)`이나 `AD(Active Directory)`에 사�
 
 실제 공격발생 시, 발생된 패킷들을 살펴보았다.
 
-![cldap_attack_packet]({{site.url}}/assets/images/2019/12/캡처.PNG)
+![cldap_attack_packet]({{site.url}}/assets/images/2019/12/cldap_request.PNG)
 *CLDAP DRDoS 공격 Request패킷*
 
 앞서 적은 것처럼 searchRequest 패킷을 다수의 랜덤 IP로 뿌리는 것을 확인할 수 있었다.

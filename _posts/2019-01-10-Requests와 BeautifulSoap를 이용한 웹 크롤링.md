@@ -1,6 +1,6 @@
 ---
 title:  "Requests와 BeautifulSoap를 이용한 웹 크롤링"
-excerpt: "작년의 마지막 3회차 CPPG 시험에 합격하게 되어서 늦게나마 후기를 남겨본다."
+excerpt: "업무를 하면서 사무자동화나 분석업무에 Python을 많이 활용하게 된다."
 toc: true
 toc_sticky: true
 categories:

@@ -22,7 +22,7 @@ last_modified_at: 2019-12-04
 
 아래는 공식 홈페이지에서 제공하는 데모인데, 한번 보면 무엇인지 이해가 될 것이다.
 
-<script id="asciicast-113463" src="https://asciinema.org/a/113463.js" async></script>
+<script id="asciicast-330532" src="https://asciinema.org/a/330532.js" async></script>
 
 실제 공식 홈페이지에 가보면 여러 public record 들을 볼 수가 있는데, 일반적인 콘솔 명령어서부터 star wars 같은 굉장히 고급(?)진 아스키아트들도 있다. 직관적으로 녹화할 수 있고, 간편하게 업로드하여 쉽게 공유할 수 있는 굉장히 편리한 도구이다.
 

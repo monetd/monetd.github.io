@@ -68,7 +68,7 @@ RFC 문서가 있다면 어떠한 프로토콜 취약점을 이용하여 증폭�
 
 구글링을 해보니 해당 프로토콜을 활성화하기 위해서는 Sharing 설정을 On 해주면 된다고 한다. 해당 설정을 키고 오픈된 포트를 보았다.
 
-![mac_open_port](static/images/2019/11/Screen Shot 2019-10-31 at 10.09.05 PM.png)
+![mac_open_port]({{site.url}}/aasets/images/2019/11/Screen Shot 2019-10-31 at 10.09.05 PM.png)
 *MACOS Open Port 확인*
 
 3283 포트가 Listen 상태인 것을 볼 수 있다. 그렇다면 로컬로 위에 패킷에서 발견된 Payload를 직접 UDP로 발신하면 증폭률을 알 수 있을 것이다. 파이썬으로 간단한 소켓 프로그램을 짜 보았다.
