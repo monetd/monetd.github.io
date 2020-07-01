@@ -48,15 +48,14 @@ DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
   - 접근제어시스템 인사연동을 통한 사용자/장비그룹 현행화 (2018)
 
 - 웹 기반의 Blackhole Router 및 IPS Interface Traffic 관제 시스템 개발 (2016)
-  - 비동기식 웹 기반 소스 IP 스캐너 개발 (2018)
-  - 클린DNS 서비스 안전운용을 위한 모니터링 시스템 개발 (2019)
-  - 융합보안실증센터 구축 및 보안위협 체험존 프로그램 개발 (2019)
-      - IP카메라 해킹 시연/방어
-      - POS단말 랜섬웨어 감염 시연/방어 ([YouTube](https://youtu.be/74vHskKwMvQ))
-      - 프린터 해킹 시연/방어 ([YouTube](https://youtu.be/BQe-M7meVLM))
-      - DDoS 공격 방어 시연/방어
-
-[KT, '융합보안실증센터' 개소...5G·IoT 보안 강화](https://biz.chosun.com/site/data/html_dir/2019/05/22/2019052200829.html)
+- 비동기식 웹 기반 소스 IP 스캐너 개발 (2018)
+- 클린DNS 서비스 안전운용을 위한 모니터링 시스템 개발 (2019)
+- 융합보안실증센터 구축 및 보안위협 체험존 프로그램 개발 (2019)
+  - IP카메라 해킹 시연/방어
+  - POS단말 랜섬웨어 감염 시연/방어 ([YouTube](https://youtu.be/74vHskKwMvQ))
+  - 프린터 해킹 시연/방어 ([YouTube](https://youtu.be/BQe-M7meVLM))
+  - DDoS 공격 방어 시연/방어
+  - [KT, '융합보안실증센터' 개소...5G·IoT 보안 강화](https://biz.chosun.com/site/data/html_dir/2019/05/22/2019052200829.html)
 
 
 ## Blog
