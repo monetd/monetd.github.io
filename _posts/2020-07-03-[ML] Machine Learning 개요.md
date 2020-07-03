@@ -192,7 +192,7 @@ last_modified_at: 2020-07-03
 - 샘플을 사용해 모델을 훈련
 - 훈련된 모델을 사용해 예측
 
-![figure-10](assets/images/2020/07/figure-10.png){: .align-center}
+![figure-10](/assets/images/2020/07/figure-10.png){: .align-center}
 
 
 다음 포스팅에서 주어진 조건에 대한 예측값을 산출간단한 선형모델을 만드는 실습을 해보도록 하겠다. 그리고 머신러닝에서 발생할 수 있는 주요문제들과 이 문제들을 해결하기 위해 어떤 노력이 필요한 지 알아보도록 하자.
