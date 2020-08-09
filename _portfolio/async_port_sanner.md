@@ -2,7 +2,7 @@
 title: "비동기식 웹 기반 Source IP 스캐너"
 excerpt: "유해 IP에 대한 포트 스캔 기능을 웹 페이지로 구현"
 header:
-  image: /assets/images/portfolio/port_scanner/scanner_list.PNG
+  <!-- image: /assets/images/portfolio/port_scanner/scanner_list.PNG -->
   teaser: /assets/images/portfolio/port_scanner/scanner_list.PNG
 sidebar:
   - title: "Tech"
@@ -10,7 +10,7 @@ sidebar:
     image_alt: "logo"
     text: "Python, Django, Celery, Redis, Docker, Javascript"
   - title: "Github"
-    text: "https://github.com/monetd/port_scanner"
+    text: https://github.com/monetd/port_scanner
 gallery:
   - url: /assets/images/portfolio/port_scanner/scanner_list.PNG
     image_path: assets/images/portfolio/port_scanner/scanner_list.PNG
