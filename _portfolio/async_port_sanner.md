@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/portfolio/port_scanner/scanner_list.PNG
 sidebar:
   - title: "Tech"
-    image: http://placehold.it/350x250
+    image: /assets/images/portfolio/port_scanner/scanner_list.PNG
     image_alt: "logo"
     text: "Python, Django, Celery, Redis, Docker, Javascript"
   - title: "Github"

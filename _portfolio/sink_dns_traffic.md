@@ -6,7 +6,7 @@ header:
   teaser: /assets/images/portfolio/sink_dns_traffic/sinkdns_login.jpg
 sidebar:
   - title: "Tech"
-    image: assets/images/portfolio/sink_dns_traffic/sinkdns_login.jpg
+    image: /assets/images/portfolio/sink_dns_traffic/sinkdns_login.jpg
     image_alt: "sink_dns_traffic login"
     text: "Python, Java, Highchart, extjs4, Javascript"
   - title: "Github"
