@@ -21,8 +21,8 @@ gallery:
   - url: /assets/images/portfolio/port_scanner/scanner_results.jpg
     image_path: assets/images/portfolio/port_scanner/scanner_results.jpg
     alt: "scan job result"
-  - url: /assets/images/portfolio/port_scanner/scanner_excel.PNG
-    image_path: assets/images/portfolio/port_scanner/scanner_excel.PNG
+  - url: /assets/images/portfolio/port_scanner/scanner_excel.png
+    image_path: assets/images/portfolio/port_scanner/scanner_excel.png
     alt: "scan job download"
 ---
 
