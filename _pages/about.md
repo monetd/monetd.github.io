@@ -9,9 +9,7 @@ DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
 
 업무 자동화와 분석용 Tools 개발을 위해 Python과 Java를 사용합니다.
 
-
 ## Education
-- 유신고등학교 (2005 ~ 2008)
 - 한양대학교 ERICA (2008 ~ 2014)
     - 컴퓨터공학전공
 
@@ -27,13 +25,7 @@ DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
 
 
 ## Work
-### Ahnlab / 소프트웨어개발실 (2014, Intership)
-- Windows System Programming (C/C++)
-- PE 파일 구조 및 X.509 인증서 구조 분석
-- Windows Authenticode PE 파일 및 PKCS #7 SignedData 메세지 구조 분석
-- CodeSign된 PE 파일의 인증서 테이블 이진 파서 및 ASN.1 Decoder 설계 및 구현
-
-### KT (2015 ~ / 보안관제대응팀 /  Assistant Manager)
+### Korea Telecom (2015 ~ / 보안관제대응팀 /  Assistant Manager)
 - 네트워크 침해공격 실시간 감시, 분석 및 침해대응 활동
   - 대규모 DDoS공격기법, 취약점 분석을 통한 탐지 패턴 추출 및 국제구간 탐지/차단 정책 적용 (상시)
   - Memcached DRDoS, ARMS DRDoS, GPON Router 취약점, VPN FIlter 취약점, ADB(Android Debug Port) 취약점, Bluekeep 취약점, Realtek SDK 취약점, ThinkPHP 취약점 등
