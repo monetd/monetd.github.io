@@ -3,11 +3,11 @@ title: "웹 기반의 Blackhole Router 및 IPS Interface Traffic 관제 시스�
 excerpt: "KT 백본망 보안장비들의 인입 BPS/PPS 종합관제"
 
 header:
-  teaser: /assets/images/portfolio/sink_dns_traffic/sinkdns_login.PNG
+  teaser: /assets/images/portfolio/sink_dns_traffic/sinkdns_login.jpg
 sidebar:
   - title: "Tech"
-    image: assets/images/portfolio/sink_dns_traffic/sinkdns_login.PNG
-    image_alt: "sink_dns_traffic"
+    image: assets/images/portfolio/sink_dns_traffic/sinkdns_login.jpg
+    image_alt: "sink_dns_traffic login"
     text: "Python, Java, Highchart, extjs4, Javascript"
   - title: "Github"
     text: https://github.com/monetd/traffic_monitor
