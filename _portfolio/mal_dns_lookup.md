@@ -1,49 +1,33 @@
 ---
 title: "클린DNS 서비스 안전운용을 위한 모니터링 시스템 개발"
-excerpt: "유해 IP에 대한 포트 스캔 기능을 웹 페이지로 구현"
+excerpt: "우회된 DNS IP 목록에 대해 정상적으로 응답을 주는지 주기적으로 모니터링"
 header:
-  <!-- image: /assets/images/portfolio/port_scanner/scanner_list.PNG -->
-  teaser: /assets/images/portfolio/port_scanner/scanner_list.PNG
+  teaser: /assets/images/portfolio/mal_dns_lookup/mal_dns_flow.PNG
 sidebar:
   - title: "Tech"
-    image: http://placehold.it/350x250
+    image: /assets/images/portfolio/mal_dns_lookup/mal_dns_flow.PNG
     image_alt: "logo"
-    text: "Python, Django, Celery, Redis, Docker, Javascript"
+    text: "Python, Flask, Javascript"
   - title: "Github"
-    text: https://github.com/monetd/port_scanner
+    text: https://github.com/monetd/mal_nslookup
 gallery:
-  - url: /assets/images/portfolio/port_scanner/scanner_list.PNG
-    image_path: assets/images/portfolio/port_scanner/scanner_list.PNG
-    alt: "scan job list"
-  - url: /assets/images/portfolio/port_scanner/scanner_post.PNG
-    image_path: assets/images/portfolio/port_scanner/scanner_post.PNG
-    alt: "scan job post"
-  - url: /assets/images/portfolio/port_scanner/scanner_results.PNG
-    image_path: assets/images/portfolio/port_scanner/scanner_results.PNG
-    alt: "scan job result"
-  - url: /assets/images/portfolio/port_scanner/scanner_excel.PNG
-    image_path: assets/images/portfolio/port_scanner/scanner_excel.PNG
-    alt: "scan job download"
+  - url: /assets/images/portfolio/mal_dns_lookup/mal_dns_monitor.png
+    image_path: assets/images/portfolio/mal_dns_lookup/mal_dns_monitor.png
+    alt: "malicious dns monitor"
+  - url: /assets/images/portfolio/mal_dns_lookup/mal_dns_ipmgmt.png
+    image_path: assets/images/portfolio/mal_dns_lookup/mal_dns_ipmgmt.png
+    alt: "malicious dns add/del"
+  - url: /assets/images/portfolio/mal_dns_lookup/mal_dns_settings.png
+    image_path: assets/images/portfolio/mal_dns_lookup/mal_dns_settings.png
+    alt: "monitor settings"
+  - url: /assets/images/portfolio/mal_dns_lookup/mal_dns_mailing.png
+    image_path: assets/images/portfolio/mal_dns_lookup/mal_dns_mailing.png
+    alt: "alert mailing"
 ---
 
-- 유해 IP에 대한 포트 스캔 기능을 웹 페이지로 구현
-- 동시에 여러 IP에 대해 포트 스캔 가능
-- 여러 Scan job을 동시에 비동기식 방식으로 수행 가능
-- 스캔 결과에 대해 .xlsx(Microsoft Excel) 형식으로 저장 가능
-- 아래 스캔 옵션 지원
-    - 스캔 안함 : 해당 IP의 국가/ISP/노드/서비스 정보만 출력
-    - 빠른 스캔 : 주요 포트 100 개에 대해서 Scan(`nmap -F`)
-    - 상세 스캔 : 주요 포트 1,000 개에 대해서 Scan(`nmap default scan`)
-    - Ping 스캔 : Ping Scan(`nmap -sP`)
+- 클린DNS : 유해DNS IP(Pharming DNS)를 Backbone에서 정상응답을 주는 클린DNS로 라우팅 해주는 서비스
+- 우회된 IP 목록에 대해 정상적인 응답을 주는지 주기적으로 확인
+- 등록된 신규 유해DNS IP에 대해 lookup 모니터링 등록/삭제 가능
+- 메일링/가청 경보 기능
 
 {% include gallery caption="Screenshots" %}
-
-- 스캔 결과는 아래 정보 출력
-    - 국가 : 국가 정보(`use GeoLite2 DB`)
-    - ISP : ISP 정보(`use GeoLite2 DB`)
-    - 노드 : (KT IP 일 경우) 노드정보
-    - 서비스 : (KT IP 일 경우) Static/Dynamic IP
-    - Status : Host Up/Down
-    - TCP Open Port
-    - UDP Open Port
-    - HTTP Fingerprint : (HTTP일 경우) Title
