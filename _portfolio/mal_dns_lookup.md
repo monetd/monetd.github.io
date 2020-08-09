@@ -1,17 +1,20 @@
 ---
-title: "비동기식 웹 기반 Source IP 스캐너"
+title: "클린DNS 서비스 안전운용을 위한 모니터링 시스템 개발"
 excerpt: "유해 IP에 대한 포트 스캔 기능을 웹 페이지로 구현"
 header:
   <!-- image: /assets/images/portfolio/port_scanner/scanner_list.PNG -->
   teaser: /assets/images/portfolio/port_scanner/scanner_list.PNG
 sidebar:
   - title: "Tech"
-    image: assets/images/portfolio/port_scanner/scanner_list.PNG
-    image_alt: "async_port_scanner"
+    image: http://placehold.it/350x250
+    image_alt: "logo"
     text: "Python, Django, Celery, Redis, Docker, Javascript"
   - title: "Github"
     text: https://github.com/monetd/port_scanner
 gallery:
+  - url: /assets/images/portfolio/port_scanner/scanner_list.PNG
+    image_path: assets/images/portfolio/port_scanner/scanner_list.PNG
+    alt: "scan job list"
   - url: /assets/images/portfolio/port_scanner/scanner_post.PNG
     image_path: assets/images/portfolio/port_scanner/scanner_post.PNG
     alt: "scan job post"
