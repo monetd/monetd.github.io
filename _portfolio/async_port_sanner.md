@@ -6,12 +6,15 @@ header:
   teaser: /assets/images/portfolio/port_scanner/scanner_list.PNG
 sidebar:
   - title: "Tech"
-    image: assets/images/portfolio/port_scanner/scanner_list.PNG
-    image_alt: "async_port_scanner"
+    image: http://placehold.it/350x250
+    image_alt: "logo"
     text: "Python, Django, Celery, Redis, Docker, Javascript"
   - title: "Github"
     text: https://github.com/monetd/port_scanner
 gallery:
+  - url: /assets/images/portfolio/port_scanner/scanner_list.PNG
+    image_path: assets/images/portfolio/port_scanner/scanner_list.PNG
+    alt: "scan job list"
   - url: /assets/images/portfolio/port_scanner/scanner_post.PNG
     image_path: assets/images/portfolio/port_scanner/scanner_post.PNG
     alt: "scan job post"
