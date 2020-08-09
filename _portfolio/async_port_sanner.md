@@ -18,8 +18,8 @@ gallery:
   - url: /assets/images/portfolio/port_scanner/scanner_post.PNG
     image_path: assets/images/portfolio/port_scanner/scanner_post.PNG
     alt: "scan job post"
-  - url: /assets/images/portfolio/port_scanner/scanner_result.PNG
-    image_path: assets/images/portfolio/port_scanner/scanner_result.PNG
+  - url: /assets/images/portfolio/port_scanner/scanner_results.PNG
+    image_path: assets/images/portfolio/port_scanner/scanner_results.PNG
     alt: "scan job result"
   - url: /assets/images/portfolio/port_scanner/scanner_excel.PNG
     image_path: assets/images/portfolio/port_scanner/scanner_excel.PNG
