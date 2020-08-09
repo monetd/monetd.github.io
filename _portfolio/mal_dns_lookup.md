@@ -2,10 +2,10 @@
 title: "클린DNS 서비스 안전운용을 위한 모니터링 시스템 개발"
 excerpt: "우회된 DNS IP 목록에 대해 정상적으로 응답을 주는지 주기적으로 모니터링"
 header:
-  teaser: /assets/images/portfolio/mal_dns_lookup/mal_dns_flow.PNG
+  teaser: /assets/images/portfolio/mal_dns_lookup/mal_dns_flow.png
 sidebar:
   - title: "Tech"
-    image: /assets/images/portfolio/mal_dns_lookup/mal_dns_flow.PNG
+    image: /assets/images/portfolio/mal_dns_lookup/mal_dns_flow.png
     image_alt: "logo"
     text: "Python, Flask, Javascript"
   - title: "Github"
