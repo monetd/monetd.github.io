@@ -209,7 +209,7 @@ pip install urllib3
 
 간단한 시험이지만 앞으로도 이 분야에 대해 계속 정진해야 할 텐데, 끝이 아닌 시작이라고 생각한다. 자격증 획득에 의의가 있는 것이 아닌 `AI`에 입문하려고 하는 사람들에게 매우 좋은 튜토리얼이자 이정표라는 생각이 든다.
 
-나온지 얼마 안 된 자격증이라 자료가 많이 없어 준비가 난감할 것이다. 찾아보니 코세라해서 하는 무료 강의도 있는 것 같으니 이런 것도 참고해보면 좋을 것 같다. ([TensorFlow in Practice(Coursera)](https://www.coursera.org/professional-certificates/tensorflow-in-practice#howItWorks){: target="_blank"})
+나온지 얼마 안 된 자격증이라 자료가 많이 없어 준비가 난감할 것이다. 찾아보니 Coursera에 무료 강의도 있는 것 같으니 이런 것도 참고해보면 좋을 것 같다. ([TensorFlow in Practice(Coursera)](https://www.coursera.org/professional-certificates/tensorflow-in-practice#howItWorks){: target="_blank"})
 
 ## Reference
 
