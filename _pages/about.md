@@ -9,19 +9,29 @@ DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
 
 업무 자동화와 분석용 Tools 개발을 위해 Python과 Java를 사용합니다.
 
+
 ## Education
 - 한양대학교 ERICA (2008 ~ 2014)
     - 컴퓨터공학전공
 
+
 ## Certification
+### Computer Science & Engineering
 - 정보처리기사 (2013)
+- 리눅스마스터 1급 (2019)
+
+### Security
 - 정보보안기사 (2016)
-- CCNA, Cisco Certified Network Associate Routing and Switching (2017)
-- CCNP, Cisco Certified Network Professional Routing and Switching (2020)
 - 개인정보관리사 (2018)
 - CISA, Certified Information Systems Auditor (2019)
-- 리눅스마스터 1급 (2019)
 - CISSP, Certified Information System Security Professional (2020)
+
+### Network
+- CCNA, Cisco Certified Network Associate Routing and Switching (2017)
+- CCNP, Cisco Certified Network Professional Routing and Switching (2020)
+
+### Data Science
+- TensorFlow Developer Certificate (2020)
 
 
 ## Work
@@ -52,6 +62,10 @@ DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
 
 ## Blog
 - [https://monetd.github.io/](https://monetd.github.io/)
+
+
+## Linkedin
+- [https://www.linkedin.com/in/monetd89/](https://www.linkedin.com/in/monetd89/)
 
 
 ## Contact me
