@@ -21,7 +21,7 @@ last_modified_at: 2020-09-13
 ### Tensorflow
 
 아마 이 포스팅을 읽는 사람들은 `TensorFlow`에 대해 자세히 알지는 못하지만 대략적으로 어떤 용어인지는 알고 있을 것이라 생각된다. `TensorFlow`는 구글이 2011년에 개발을 시작하여 2015년에 오픈소스로 공개한 기계학습 라이브러리(혹은 프레임워크)이다.
-더욱 더 자세한 내용은 [Tensorflow 공식 홈페이지]("https://www.tensorflow.org/?hl=ko"){: target="_blank"} 를 참고하자.
+더욱 더 자세한 내용은 [Tensorflow 공식 홈페이지](https://www.tensorflow.org/?hl=ko){: target="_blank"} 를 참고하자.
 
 더 간단히 말하자면 나 같은(?) 일반인도 딥러닝, 강화학습 등 여러가지 머신러닝 관련 프로젝트를 수행할 수 있도록 구글에서 내놓은 일종의 Tool이라고 보면 될 것 같다. 현재 `2.3.0` 버전까지 나와 있으며(*2020-09-13 기준*), 참고로 버전 `1.0` 대와 `2.0` 대는 많은 차이가 있으니 제일 큰 변화는 `Keras`라는 라이브러리를 통합했다는 것이다.(`Keras` 또한 별개의 머신러닝 라이브러리 였다.) 기존에 `1.0` 버전은 코드가 복잡하고 때문에 간단한 모델링에 `Keras`를 사용하였었지만 `2.0` 으로의 버전업을 통해 `Keras`가 `TensorFlow`에 통합되게 되었다. 따라서 입문을 할 생각이라면 `2.0`을 추천한다.
 
@@ -36,7 +36,7 @@ last_modified_at: 2020-09-13
 #### 기술 체크리스트
 ![tensorflow_cert](../assets/images/2020/09/tensorflow-cert.png)
 
-`TensorFlow Developer Certification`는 응시자가 `TensorFlow 2.x`를 통해 모델을 빌드하여 문제를 해결할 수 있는지 확인하는 시험이다. [응시자 참고자료]("https://www.tensorflow.org/site-assets/downloads/marketing/cert/TF_Certificate_Candidate_Handbook_ko.pdf?hl=ko"){: target="_blank"}에서 본 세부적인 항목은 아래와 같다.
+`TensorFlow Developer Certification`는 응시자가 `TensorFlow 2.x`를 통해 모델을 빌드하여 문제를 해결할 수 있는지 확인하는 시험이다. [응시자 참고자료](https://www.tensorflow.org/site-assets/downloads/marketing/cert/TF_Certificate_Candidate_Handbook_ko.pdf?hl=ko){: target="_blank"}에서 본 세부적인 항목은 아래와 같다.
 
 >**1. TensorFlow 2.x를 활용하여 신경망 모델 빌드 및 훈련**
 >
@@ -105,7 +105,7 @@ last_modified_at: 2020-09-13
 - 응시료 : $100 (해외 결제가 가능한 카드)
 - 시험 시간 : 300분
 - 시험 환경 : 인터넷이 연결되어 있는 어디에서나 가능
-- IDE : [PyCharm]("https://www.jetbrains.com/help/pycharm/installation-guide.html"){: target="_blank"}에 시험용 Plugin(*Google Certification*) 설치 (유료가 아닌 Communiy 버전도 가능)
+- IDE : [PyCharm](https://www.jetbrains.com/help/pycharm/installation-guide.html){: target="_blank"}에 시험용 Plugin(*Google Certification*) 설치 (유료가 아닌 Communiy 버전도 가능)
 - 시험 준비물 : 여권이나 영문 운전면허증. 셀카
 - 재응시 기간
   - 1번째 불합격 시, 14일 이후 재응시 가능
@@ -115,14 +115,12 @@ last_modified_at: 2020-09-13
 - 결과발표 : 응시자가 시험 제출 시 채점 과정을 거쳐 응시자 포털에 점수 게시. 시험 합격 후에는 등록된 이메일 주소로 인증서가 발송(영업일 기준 10일 이내)
 - 인증서 유효기간 : 36개월(갱신하려면 등록절차와 인증과정을 다시 거쳐야 함)
 
-
 #### 혜택
 
-시험에 혜택이라고 하면 제일 먼저 자신의 머신러닝/딥러닝 지식을 검증할 수 있고 해당 자격증을 **공식적으로** `GitHub`, `LinkedIn` 페이지에 기입할 수 있다는 점이다. 그리고 다소 특이했던 것은 전 세계의 [Certificate Network]("https://developers.google.com/certification/directory/tensorflow?hl=ko"){: target="_blank"}에 이름이 게재된다.
+시험에 혜택이라고 하면 제일 먼저 자신의 머신러닝/딥러닝 지식을 검증할 수 있고 해당 자격증을 **공식적으로** `GitHub`, `LinkedIn` 페이지에 기입할 수 있다는 점이다. 그리고 다소 특이했던 것은 전 세계의 [Certificate Network](https://developers.google.com/certification/directory/tensorflow?hl=ko){: target="_blank"}에 이름이 게재된다.
 
 ![cert_network](../assets/images/2020/09/cert-network.png)
 *각 대륙별로 취득 순서대로 이름이 게제된다. 이른바 명예의 전당?*
-
 
 ### 시험준비
 
@@ -136,7 +134,7 @@ last_modified_at: 2020-09-13
 
 #### 각 문제(Category) 별 정리
 
-시험을 준비하기 앞서 `Google Colaboratory`를 이용해 실습하는 것이 매우 추천한다.(`Google Colaboratory`가 뭔지 모르겠다면.. [이 링크]("https://colab.research.google.com/notebooks/welcome.ipynb?hl=ko"){: target="_blank"}를 참고하자!)
+시험을 준비하기 앞서 `Google Colaboratory`를 이용해 실습하는 것이 매우 추천한다.(`Google Colaboratory`가 뭔지 모르겠다면.. [이 링크](https://colab.research.google.com/notebooks/welcome.ipynb?hl=ko){: target="_blank"}를 참고하자!)
 학습 Datasets 중 GPU가 없으면 학습만 몇 시간이 걸리는 것이 있기에.. 그리고 생 `.py` 보다 노트북 형태의 파일인 `ipyb`로 실습하는 것이 코드 플로우나 필요한 필기를 `markdown`을 이용해 기록할 수 있기에 학습에 더 좋을 것이다.
 
 나는 모든 실습 파일들을 Google Driver에 폴더별로 정리하고 각 문제별로 노트북 파일과 출력 모델들을 정리하였다.
@@ -162,7 +160,7 @@ pip install Pillow
 pip install urllib3
 ```
 
-더욱 더 자세한 셋팅방법은 [이 문서]("https://www.tensorflow.org/extras/cert/Setting_Up_TF_Developer_Certificate_Exam.pdf?authuser=4"){:target="_blank"}를 참고하자.
+더욱 더 자세한 셋팅방법은 [이 문서](https://www.tensorflow.org/extras/cert/Setting_Up_TF_Developer_Certificate_Exam.pdf?authuser=4){:target="_blank"}를 참고하자.
 
 모두 올바르게 셋팅되었고, 해당 프로젝트 폴더를 import 해 보면 아래의 화면과 같을 것이다. 여기서 `Take the certification exam`을 누르면 시험이 시작된다.
 
@@ -208,9 +206,10 @@ pip install urllib3
 
 간단한 시험이지만 앞으로도 이 분야에 대해 계속 정진해야 할 텐데, 끝이 아닌 시작이라고 생각한다. 자격증 획득에 의의가 있는 것이 아닌 `AI`에 입문하려고 하는 사람들에게 매우 좋은 튜토리얼이자 이정표라는 생각이 든다.
 
-나온지 얼마 안 된 자격증이라 자료가 많이 없어 준비가 난감할 것이다. 찾아보니 코세라해서 하는 무료 강의도 있는 것 같으니 이런 것도 참고해보면 좋을 것 같다. ([TensorFlow in Practice(Coursera)]("https://www.coursera.org/professional-certificates/tensorflow-in-practice#howItWorks"){: target="_blank"})
+나온지 얼마 안 된 자격증이라 자료가 많이 없어 준비가 난감할 것이다. 찾아보니 코세라해서 하는 무료 강의도 있는 것 같으니 이런 것도 참고해보면 좋을 것 같다. ([TensorFlow in Practice(Coursera)](https://www.coursera.org/professional-certificates/tensorflow-in-practice#howItWorks){: target="_blank"})
 
 ## Reference
+
 - [텐서플로우 - 나무위키](https://namu.wiki/w/%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%EC%9A%B0?from=Tensorflow){: target="_blank"}
-- [TensorFlow 개발자 인증]("https://www.tensorflow.org/certificate?hl=ko"){: target="_blank"}
-- [텐서플로우 개발자 자격증 (Tensorflow Developer Certification) 시험 그리고 취득방법]("https://teddylee777.github.io/thoughts/tensorflow-2-certification"){: target="_blank"}
+- [TensorFlow 개발자 인증](https://www.tensorflow.org/certificate?hl=ko){: target="_blank"}
+- [텐서플로우 개발자 자격증 (Tensorflow Developer Certification) 시험 그리고 취득방법](https://teddylee777.github.io/thoughts/tensorflow-2-certification){: target="_blank"}
