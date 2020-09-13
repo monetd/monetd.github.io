@@ -34,7 +34,7 @@ last_modified_at: 2020-09-13
 
 ### TensorFlow Developer Certification
 #### 기술 체크리스트
-![tensorflow_cert](../assets/images/2020/09/tensorflow-cert.png)
+![tensorflow_cert](/assets/images/2020/09/tensorflow-cert.png)
 
 `TensorFlow Developer Certification`는 응시자가 `TensorFlow 2.x`를 통해 모델을 빌드하여 문제를 해결할 수 있는지 확인하는 시험이다. [응시자 참고자료](https://www.tensorflow.org/site-assets/downloads/marketing/cert/TF_Certificate_Candidate_Handbook_ko.pdf?hl=ko){: target="_blank"}에서 본 세부적인 항목은 아래와 같다.
 
@@ -119,7 +119,7 @@ last_modified_at: 2020-09-13
 
 시험에 혜택이라고 하면 제일 먼저 자신의 머신러닝/딥러닝 지식을 검증할 수 있고 해당 자격증을 **공식적으로** `GitHub`, `LinkedIn` 페이지에 기입할 수 있다는 점이다. 그리고 다소 특이했던 것은 전 세계의 [Certificate Network](https://developers.google.com/certification/directory/tensorflow?hl=ko){: target="_blank"}에 이름이 게재된다.
 
-![cert_network](../assets/images/2020/09/cert-network.png)
+![cert_network](/assets/images/2020/09/cert-network.png)
 *각 대륙별로 취득 순서대로 이름이 게제된다. 이른바 명예의 전당?*
 
 ### 시험준비
@@ -139,11 +139,11 @@ last_modified_at: 2020-09-13
 
 나는 모든 실습 파일들을 Google Driver에 폴더별로 정리하고 각 문제별로 노트북 파일과 출력 모델들을 정리하였다.
 
-![google_drive](../assets/images/2020/09/google-drive.png)
+![google_drive](/assets/images/2020/09/google-drive.png)
 
 또한 실습에 활용한 모델에 대해서 각각의 성능지표(val_loss, val_acc)를 작성하여 기록해 두었다.
 
-![model_evaluate_spreadsheet](../assets/images/2020/09/model-evaluate-spreadsheet.png)
+![model_evaluate_spreadsheet](/assets/images/2020/09/model-evaluate-spreadsheet.png)
 
 #### 시험 환경 셋팅
 
@@ -164,27 +164,27 @@ pip install urllib3
 
 모두 올바르게 셋팅되었고, 해당 프로젝트 폴더를 import 해 보면 아래의 화면과 같을 것이다. 여기서 `Take the certification exam`을 누르면 시험이 시작된다.
 
-![pycharm-test](../assets/images/2020/09/pycharm-test.png)
+![pycharm-test](/assets/images/2020/09/pycharm-test.png)
 *환경 셋팅 후, Pycharm 실행 화면*
 
 #### 시험 당일
 
 전에 미리 시험 접수를 해 놓았기 때문에 날라온 메일의 링크를 타고 들어가 시험 응시를 시작하면 된다.
 
-![cert_mail](../assets/images/2020/09/cert-mail.png)
+![cert_mail](/assets/images/2020/09/cert-mail.png)
 *시험 접수 후 날라온 메일*
 
 해당 링크를 타고 들어가서 시험 응시권(?)을 확인하고 Redeem 버튼을 누르면 시험 환경구성이 시작된다. 완료되었을 때, `Pycharm`으로 가 시험을 시작하면 된다.
 
-![provisioning](../assets/images/2020/09/provisioning.png)
+![provisioning](/assets/images/2020/09/provisioning.png)
 *해당 대시보드에서 'Redeem' 버튼을 클릭 시 시험을 위한 환경이 생성된다.*
 
 오른쪽 상단에 `End Exam` 버튼 옆의 화살표를 누르면 남은 시험 시간을 확인할 수 있으며, 오른쪽 하단에는 각 문제별로 테스트를 해 볼 수 있는 `Submit and Test` 버튼이 있다. 해당 버튼을 눌르면 생성된 모델을 업로드해 `5/5` 식으로 결과를 알려준다.
 
-![cert_time](../assets/images/2020/09/cert-time.png)
+![cert_time](/assets/images/2020/09/cert-time.png)
 *남은 시험 시간*
 
-![submit_and_test](../assets/images/2020/09/submit-and-test.png)
+![submit_and_test](/assets/images/2020/09/submit-and-test.png)
 *각 문제별로 모델의 Test-case를 수행할 수 있다.*
 
 나의 경우 각 문제별로 해당 버튼을 최소 5번은 눌러서 결과가 모두 `5/5`인 경우에만 정합한 모델로 판단했다. 5번중에 한번이라도 만점이 나오지 않는다면 다시 모델링을 하여 모델을 추출하였다. 각 모델별로 넘어야하는 최소 성능수치는 문제 설명에 기입되어 있다.
@@ -197,7 +197,7 @@ pip install urllib3
 
 ### 합격 후
 
-![pass_exam_mail](../assets/images/2020/09/pass-exam-mail.png)
+![pass_exam_mail](/assets/images/2020/09/pass-exam-mail.png)
 *시험 종료 후 받은 메일*
 
 시험을 끝내면 ()체감 상) 10초도 안되서 합격여부를 알려주는 메일이 온다. 해당 메일에는인증서 발급을 위해 정보를 요구하는 링크가 들어있다. 해당 링크를 접속하여 자신의 정보를 입력하면 10 영업일 이내에 인증서가 발급된다. 인증 네트워크는 매달 Update 되는 것 같다. Simple해서 좋다. 조금 허무하기도 하고...
