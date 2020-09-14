@@ -25,8 +25,7 @@ last_modified_at: 2020-09-13
 
 더 간단히 말하자면 나 같은(?) 일반인도 딥러닝, 강화학습 등 여러가지 머신러닝 관련 프로젝트를 수행할 수 있도록 구글에서 내놓은 일종의 Tool이라고 보면 될 것 같다. 현재 `2.3.0` 버전까지 나와 있으며(*2020-09-13 기준*), 참고로 버전 `1.0` 대와 `2.0` 대는 많은 차이가 있으니 제일 큰 변화는 `Keras`라는 라이브러리를 통합했다는 것이다.(`Keras` 또한 별개의 머신러닝 라이브러리 였다.) 기존에 `1.0` 버전은 코드가 복잡하고 때문에 간단한 모델링에 `Keras`를 사용하였었지만 `2.0` 으로의 버전업을 통해 `Keras`가 `TensorFlow`에 통합되게 되었다. 따라서 입문을 할 생각이라면 `2.0`을 추천한다.
 
-![pt_vs_ts](/assets/images/2020/09/pt-vs-ts.png)
-*PyTorch vs TensorFlow*
+{% include figure image_path="/assets/images/2020/09/pt-vs-ts.png" alt="pt_vs_ts" caption="PyTorch vs TensorFlow" %}{: .align-center}
 
 최근에는 Facebook에서 밀고 있는 `PyTorch`란 라이브러도 많이 뜨고 있다. 아무래도 유저 친화적으로 되어버린 `TensorFlow`에 비해 조금 더 Low-Level로 세밀하게 모델링을 할 수 있기에 학계에서 많이 사용되는 듯하다. `TensorFlow`와 달리 Facebook이 직접 해당 라이브러리를 관리하는 포럼도 있다. 보다 더 학구적으로 머신러닝을 연구해보고 싶다면 해당 라이브러리로 입문하는 것도 좋은 생각이다.
 
@@ -122,8 +121,7 @@ last_modified_at: 2020-09-13
 
 시험에 혜택이라고 하면 제일 먼저 자신의 머신러닝/딥러닝 지식을 검증할 수 있고 해당 자격증을 **공식적으로** `GitHub`, `LinkedIn` 페이지에 기입할 수 있다는 점이다. 그리고 다소 특이했던 것은 전 세계의 [Certificate Network](https://developers.google.com/certification/directory/tensorflow?hl=ko){: target="_blank"}에 이름이 게재된다.
 
-![cert_network](/assets/images/2020/09/cert-network.png)
-*각 대륙별로 취득 순서대로 이름이 게제된다. 이른바 명예의 전당?*
+{% include figure image_path="/assets/images/2020/09/cert-network.png" alt="cert_network" caption="각 대륙별로 취득 순서대로 이름이 게제된다. 이른바 명예의 전당?" %}{: .align-center}
 
 ### 시험준비
 
@@ -167,28 +165,23 @@ pip install urllib3
 
 모두 올바르게 셋팅되었고, 해당 프로젝트 폴더를 import 해 보면 아래의 화면과 같을 것이다. 여기서 `Take the certification exam`을 누르면 시험이 시작된다.
 
-![pycharm-test](/assets/images/2020/09/pycharm-test.png)
-*환경 셋팅 후, Pycharm 실행 화면*
+{% include figure image_path="/assets/images/2020/09/pycharm-test.png" alt="pycharm-test" caption="환경 셋팅 후, Pycharm 실행 화면" %}{: .align-center}
 
 #### 시험 당일
 
 전에 미리 시험 접수를 해 놓았기 때문에 날라온 메일의 링크를 타고 들어가 시험 응시를 시작하면 된다.
 
-![cert_mail](/assets/images/2020/09/cert-mail.png)
-*시험 접수 후 날라온 메일*
+{% include figure image_path="/assets/images/2020/09/cert-mail.png" alt="cert_mail" caption="시험 접수 후 날라온 메일" %}{: .align-center}
 
 해당 링크를 타고 들어가서 시험 응시권(?)을 확인하고 Redeem 버튼을 누르면 시험 환경구성이 시작된다. 완료되었을 때, `Pycharm`으로 가 시험을 시작하면 된다.
 
-![provisioning](/assets/images/2020/09/provisioning.png)
-*해당 대시보드에서 'Redeem' 버튼을 클릭 시 시험을 위한 환경이 생성된다.*
+{% include figure image_path="/assets/images/2020/09/provisioning.png" alt="provisioning" caption="해당 대시보드에서 'Redeem' 버튼을 클릭 시 시험을 위한 환경이 생성된다." %}{: .align-center}
 
 오른쪽 상단에 `End Exam` 버튼 옆의 화살표를 누르면 남은 시험 시간을 확인할 수 있으며, 오른쪽 하단에는 각 문제별로 테스트를 해 볼 수 있는 `Submit and Test` 버튼이 있다. 해당 버튼을 눌르면 생성된 모델을 업로드해 `5/5` 식으로 결과를 알려준다.
 
-![cert_time](/assets/images/2020/09/cert-time.png)
-*남은 시험 시간*
+{% include figure image_path="/assets/images/2020/09/cert-time.png" alt="cert_time" caption="남은 시험 시간" %}{: .align-center}
 
-![submit_and_test](/assets/images/2020/09/submit-and-test.png)
-*각 문제별로 모델의 Test-case를 수행할 수 있다.*
+{% include figure image_path="/assets/images/2020/09/submit-and-test.png" alt="submit_and_test" caption="각 문제별로 모델의 Test-case를 수행할 수 있다." %}{: .align-center}
 
 나의 경우 각 문제별로 해당 버튼을 최소 5번은 눌러서 결과가 모두 `5/5`인 경우에만 정합한 모델로 판단했다. 5번중에 한번이라도 만점이 나오지 않는다면 다시 모델링을 하여 모델을 추출하였다. 각 모델별로 넘어야하는 최소 성능수치는 문제 설명에 기입되어 있다.
 
@@ -200,8 +193,7 @@ pip install urllib3
 
 ### 합격 후
 
-![pass_exam_mail](/assets/images/2020/09/pass-exam-mail.png)
-*시험 종료 후 받은 메일*
+{% include figure image_path="/assets/images/2020/09/pass-exam-mail.png" alt="pass_exam_mail" caption="시험 종료 후 받은 메일" %}{: .align-center}
 
 시험을 끝내면 (체감 상) 10초도 안되서 합격여부를 알려주는 메일이 온다. 해당 메일에는인증서 발급을 위해 정보를 요구하는 링크가 들어있다. 해당 링크를 접속하여 자신의 정보를 입력하면 10 영업일 이내에 인증서가 발급된다. 인증 네트워크는 매달 Update 되는 것 같다. Simple해서 좋다. 조금 허무하기도 하고...
 
