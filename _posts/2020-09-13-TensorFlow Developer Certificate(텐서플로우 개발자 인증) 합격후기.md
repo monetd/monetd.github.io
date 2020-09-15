@@ -1,5 +1,5 @@
 ---
-title: "TensorFlow Developer Certificate(텐서플로우 개발자 인증) 합격후기"
+title: "텐서플로우 개발자 인증(TensorFlow Developer Certificate) 합격후기"
 excerpt: "올해 초 운이 좋게 AI 분야의 일을 할 기회가 생겼고 아직은 미숙하지만 해당 분야에 대해 지속적으로 학습하고 있다."
 toc: true
 toc_sticky: true
@@ -14,11 +14,13 @@ tags:
 last_modified_at: 2020-09-13
 ---
 
+![tf-badge](/assets/images/2020/09/tf-badge.png){: .align-center}
+
 올해 초 운이 좋게 AI 분야의 일을 할 기회가 생겼고 아직은 미숙하지만 해당 분야에 대해 지속적으로 학습하고 있다. 그러던 중 올해 `TensorFlow 개발자 인증` 시험이 생겼다는 소식을 듣게되었고 해당 시험을 준비하게 되었다. 개인적으로 IT 분야의 자격증은 사실 실력의 척도가 된다고 생각하지 않는다. **'특히나 개발 영역의 자격증 이라면...''**
 
 다만 이번 자격증을 준비하면서 다시 한번 머리속의 지식들을 정리하고 구글의 머신러닝 라이브러인 `TensorFlow` 사용법에 대하여 실습할 수 있었던 좋은 기회였던 것 같다. 이전의 합격후기와 마찬가지로 개인적인 기록을 남김과 동시에 혹시라도 시험을 준비하는 사람들에게 도움이 되고 싶은 마음에 포스팅을 남긴다.
 
-### Tensorflow
+### TensorFlow
 
 아마 이 포스팅을 읽는 사람들은 `TensorFlow`에 대해 자세히 알지는 못하지만 대략적으로 어떤 용어인지는 알고 있을 것이라 생각된다. `TensorFlow`는 구글이 2011년에 개발을 시작하여 2015년에 오픈소스로 공개한 기계학습 라이브러리(혹은 프레임워크)이다.
 더욱 더 자세한 내용은 [Tensorflow 공식 홈페이지](https://www.tensorflow.org/?hl=ko){: target="_blank"} 를 참고하자.
