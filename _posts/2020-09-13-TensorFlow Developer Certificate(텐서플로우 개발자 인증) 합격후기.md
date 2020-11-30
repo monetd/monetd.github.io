@@ -29,7 +29,7 @@ last_modified_at: 2020-09-13
 
 {% include figure image_path="/assets/images/2020/09/pt-vs-ts.png" alt="pt_vs_ts" caption="PyTorch vs TensorFlow" %}{: .align-center}
 
-최근에는 Facebook에서 밀고 있는 `PyTorch`란 라이브러도 많이 뜨고 있다. 아무래도 유저 친화적으로 되어버린 `TensorFlow`에 비해 조금 더 Low-Level로 세밀하게 모델링을 할 수 있기에 학계에서 많이 사용되는 듯하다. `TensorFlow`와 달리 Facebook이 직접 해당 라이브러리를 관리하는 포럼도 있다. 보다 더 학구적으로 머신러닝을 연구해보고 싶다면 해당 라이브러리로 입문하는 것도 좋은 생각이다.
+최근에는 Facebook에서 밀고 있는 `PyTorch`란 라이브러도 많이 뜨고 있다. `TensorFlow`와 달리 Facebook이 직접 해당 라이브러리를 관리하는 포럼도 있다. 보다 더 학구적으로 머신러닝을 연구해보고 싶다면 해당 라이브러리로 입문하는 것도 좋은 생각이다.
 
 `TensorFlow` 시험의 경우 최신버전인 `2.3.0`이 아닌 `2.1.0` 버전 환경에서 수행된다.
 
