@@ -1,6 +1,6 @@
 ---
 title: "MACOS 에서 PyTorch 설치하기"
-excerpt: "..."
+excerpt: "보통 머신러닝/딥러닝 프로젝트를 수행할 시 TensorFlow나 Keras를 많이 사용하였었다. 하지만 `PyTorch`를 사용하는 사람들이 늘어나면서 나도 개인적으로 설치 방법을 정리해 놓으려고 한다."
 toc: true
 toc_sticky: true
 categories:
