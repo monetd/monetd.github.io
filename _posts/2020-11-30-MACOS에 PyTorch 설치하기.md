@@ -10,7 +10,7 @@ tags:
   - Deep learning
   - AI
   - '2020'
-last_modified_at: 2022-11-30
+last_modified_at: 2020-11-30
 ---
 
 ![pytorch_logo](/assets/images/2020/11/pytorch-logo.png){: .align-center}
