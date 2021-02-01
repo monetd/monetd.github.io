@@ -4,10 +4,9 @@ title: About me
 permalink: /about/
 ---
 ## Who am I?
-KT에서 네트워크 보안직무에 근무하고 있습니다. KT 유/무선망 보안관제 업무를 주로 하고 있으며,
-DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
-
-업무 자동화와 분석용 Tools 개발을 위해 Python과 Java를 사용합니다.
+KT에서 근무하고 있습니다.
+겉핧기를 좋아하고 금방 질리지만 다양한 분야에 관심이 많습니다.
+사람을 이롭게(편하고 게으르게) 만드는 엔지니어가 되길 지향합니다.
 
 
 ## Education
@@ -20,22 +19,25 @@ DDoS 공격이나 침해사고 발생 시 분석업무도 하고 있습니다.
 - 정보처리기사 (2013)
 - 리눅스마스터 1급 (2019)
 
+
 ### Security
 - 정보보안기사 (2016)
 - 개인정보관리사 (2018)
 - CISA, Certified Information Systems Auditor (2019)
 - CISSP, Certified Information System Security Professional (2020)
 
+
 ### Network
 - CCNA, Cisco Certified Network Associate Routing and Switching (2017)
 - CCNP, Cisco Certified Network Professional Routing and Switching (2020)
+
 
 ### Data Science
 - TensorFlow Developer Certificate (2020)
 
 
 ## Work
-### Korea Telecom (2015 ~ / 보안관제대응팀 /  Assistant Manager)
+### Korea Telecom (2015 ~ 2020 / 네트워크 보안관제)
 - 네트워크 침해공격 실시간 감시, 분석 및 침해대응 활동
   - 대규모 DDoS공격기법, 취약점 분석을 통한 탐지 패턴 추출 및 국제구간 탐지/차단 정책 적용 (상시)
   - Memcached DRDoS, ARMS DRDoS, GPON Router 취약점, VPN FIlter 취약점, ADB(Android Debug Port) 취약점, Bluekeep 취약점, Realtek SDK 취약점, ThinkPHP 취약점 등

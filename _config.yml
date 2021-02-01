@@ -20,7 +20,7 @@ title                    : "게으름에 의한 게으름을 위한 기록소"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "monetd"
-description              : "네트워크 보안쟁이"
+description              : "공부해서 남주자"
 url                      : "https://monetd.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes
