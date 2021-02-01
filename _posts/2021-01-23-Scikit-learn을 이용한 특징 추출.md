@@ -5,6 +5,7 @@ toc: true
 toc_sticky: true
 categories:
   - Python
+  - NLP
 tags:
   - Scikit-learn
   - Machine learning
