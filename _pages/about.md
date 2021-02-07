@@ -61,6 +61,7 @@ KT에서 근무하고 있습니다.
   - DDoS 공격 방어 시연/방어
   - [KT, '융합보안실증센터' 개소...5G·IoT 보안 강화](https://biz.chosun.com/site/data/html_dir/2019/05/22/2019052200829.html)
 
+- 머신러닝을 활용하여 악성사이트 탐지 프로젝트 수행 (2020)
 
 ## Blog
 - [https://monetd.github.io/](https://monetd.github.io/)
