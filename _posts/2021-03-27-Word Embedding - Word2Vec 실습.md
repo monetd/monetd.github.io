@@ -145,7 +145,7 @@ model = Word2Vec(sentences=result, size=100, window=5, min_count=5, workers=4, s
 - workers = 학습에 이용하는 프로세스의 갯수
 - sg = 0 일 경우, `CBOW`, 1 일 경우 `Skip-gram`
 
-![context_window](/assets/images/2021/03/2021-03-27-22-57-43.png){: .align-center}
+![w2v context_window](/assets/images/2021/03/w2v_context_window.png){: .align-center}
 
 이후 학습된 모델을 이용하여 "man"과 유사한 단어들에 대해 출력해보자.
 
