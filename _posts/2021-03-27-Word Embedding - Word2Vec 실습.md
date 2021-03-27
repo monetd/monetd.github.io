@@ -1,6 +1,6 @@
 ---
 title: "Word Embedding - Word2Vec 실습"
-excerpt: ""
+excerpt: "앞어서 단어 표현(Word Representation) 에 대해 정리하였지만 이론적인 내용이 대부분이고 실질적으로 어떻게 쓰이는지 알아보기 위해 딥 러닝을 이용한 자연어 처리 입문을 보고 코드로 실습해본 내용을 정리해 보고자 한다."
 toc: true
 toc_sticky: true
 categories:
@@ -12,7 +12,7 @@ tags:
   - Word2vec
   - AI
   - '2021'
-last_modified_at: 2021-03-37
+last_modified_at: 2021-03-27
 ---
 
 앞어서 `단어 표현(Word Representation)` 에 대해 정리하였지만 이론적인 내용이 대부분이고 실질적으로 어떻게 쓰이는지 알아보기 위해 [딥 러닝을 이용한 자연어 처리 입문]("https://wikidocs.net/book/2155"){: target="_blank"}을 보고 코드로 실습해본 내용을 정리해 보고자 한다.
