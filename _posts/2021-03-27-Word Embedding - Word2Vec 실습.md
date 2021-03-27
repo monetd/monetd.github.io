@@ -15,11 +15,11 @@ tags:
 last_modified_at: 2021-03-27
 ---
 
-앞어서 `단어 표현(Word Representation)` 에 대해 정리하였지만 이론적인 내용이 대부분이고 실질적으로 어떻게 쓰이는지 알아보기 위해 [딥 러닝을 이용한 자연어 처리 입문]("https://wikidocs.net/book/2155"){: target="_blank"}을 보고 코드로 실습해본 내용을 정리해 보고자 한다.
+앞어서 `단어 표현(Word Representation)` 에 대해 정리하였지만 이론적인 내용이 대부분이고 실질적으로 어떻게 쓰이는지 알아보기 위해 [딥 러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155){: target="_blank"}을 보고 코드로 실습해본 내용을 정리해 보고자 한다.
 
 첫 실습의 대상은 가장 말이 알려진 `Word2Vec` 이지만 뒤에 포스팅에서 다른 `Distributed Representation` 방법인 `GloVe`와 `FastText`에 대해서도 설명하고자 한다.
 
-이번 실습에서는 [gensim]("https://radimrehurek.com/gensim/"){: target="_blank"}이라는 라이브러리를 이용한다. `gensim`은 자연어를 벡터로 변환하는데 필요한 대부분의 편의 기능을 제공해주고 있는 대표적인 라이브러리이다.
+이번 실습에서는 [gensim](https://radimrehurek.com/gensim/){: target="_blank"}이라는 라이브러리를 이용한다. `gensim`은 자연어를 벡터로 변환하는데 필요한 대부분의 편의 기능을 제공해주고 있는 대표적인 라이브러리이다.
 
 ![gensim_logo](/assets/images/2021/03/gensim_logo.png){: .align-center}
 
@@ -434,8 +434,8 @@ model = gensim.models.Word2Vec.load('ko.bin 파일의 경로')
 
 Word2Vec 모델은 자연어를 수학적인 좌표값으로 표현해 줄 수 있다는 점에서 굉장히 획기적인 아이디어같다. 이러한 임베딩 방법론은 최근에는 자연어 처리를 넘어 추천 시스템 등에도 사용이 되고 있다. 우선 적당하게 데이터를 나열해주면 Word2Vec은 위치가 근저한 데이터를 유사도가 높은 벡터를 만들어준다는 점에서 착안된 아이디어이다.
 
-[Word2Vec 그리고 추천 시스템의 Item2Vec]("https://brunch.co.kr/@goodvc78/16?fbclid=IwAR1QZZAeZe_tNWxnxVCRwl8PIouBPAaqSIJ1lBxJ-EKtfDfmLehi1MUV_Lk"){: target="_blank"} 포스팅을 참고해보면 좋을 것 같다.
+[Word2Vec 그리고 추천 시스템의 Item2Vec](https://brunch.co.kr/@goodvc78/16?fbclid=IwAR1QZZAeZe_tNWxnxVCRwl8PIouBPAaqSIJ1lBxJ-EKtfDfmLehi1MUV_Lk){: target="_blank"} 포스팅을 참고해보면 좋을 것 같다.
 
 ## Reference
-- [딥 러닝을 이용한 자연어 처리 입문]("https://wikidocs.net/book/2155"){: target="_blank"}
-- [Word2Vec 그리고 추천 시스템의 Item2Vec]("https://brunch.co.kr/@goodvc78/16?fbclid=IwAR1QZZAeZe_tNWxnxVCRwl8PIouBPAaqSIJ1lBxJ-EKtfDfmLehi1MUV_Lk"){: target="_blank"}
+- [딥 러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155){: target="_blank"}
+- [Word2Vec 그리고 추천 시스템의 Item2Vec](https://brunch.co.kr/@goodvc78/16?fbclid=IwAR1QZZAeZe_tNWxnxVCRwl8PIouBPAaqSIJ1lBxJ-EKtfDfmLehi1MUV_Lk){: target="_blank"}
