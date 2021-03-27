@@ -172,7 +172,7 @@ loaded_model = KeyedVectors.load_word2vec_format("eng_w2v") # 모델 로드
 
 필자는 Google Colab 환경에서 실습을 진행했기에 아래와 같이 eng_w2v 라는 이름으로 모델이 저장된 걸 볼 수 있었다.
 
-![eng_w2v](../assets/images/2021/03/eng_w2v.png){: .align-center}
+![eng_w2v](/assets/images/2021/03/eng_w2v.png){: .align-center}
 
 로드한 모델에 대해서 다시 "man"과 유사한 단어를 출력해보자.
 
