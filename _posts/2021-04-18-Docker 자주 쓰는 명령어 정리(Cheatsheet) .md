@@ -1,5 +1,5 @@
 ---
-title: "2021-04-18-Docker 자주 쓰는 명령어 정리(Cheatsheet)"
+title: "Docker 자주 쓰는 명령어 정리(Cheatsheet)"
 excerpt: "과거 vmware나 virtualbox를 설치하여 무겁고 번거롭게 가상화 환경을 구축하였다면 현재는 Docker 로 간편하고 빠르게 원하는 환경을 구축한다. 하지만 항상 헷갈리거나 잊어먹는 명령어들이 있어 아래의 포스팅으로 정리를 해놓고자 한다."
 toc: true
 toc_sticky: true
