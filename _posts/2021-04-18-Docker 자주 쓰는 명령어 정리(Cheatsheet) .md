@@ -250,7 +250,7 @@ echo test1234 > /var/www/index.html
 
 ## 실습 4. 풀스택 워드프레스 이미지 만들기
 
-![wordpress_logo](/assets/images/2021/04/wordpress_logo.png)
+![wordpress_logo](/assets/images/2021/04/wordpress_logo.png){: .align-center}
 
 워드프레스는 간단하게 웹 페이지를 구축할 수 있어 전 세계적으로 많이 사용되었던 CMS(웹 콘텐츠 관리 시스템) 소프트웨어이다. 이 역시 기본적으로 Docker Hub에서 제공하는 도커 이미지가 있으나 구축에 필요한 DB인 `MySQL`은 따로 떨어져 있어 구축이 불편하다.
 
