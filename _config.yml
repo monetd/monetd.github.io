@@ -23,7 +23,7 @@ name                     : "monetd"
 description              : "공부해서 남주자"
 url                      : "https://monetd.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes
+repository               : "monetd/monetd.github.io"  # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : #
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
