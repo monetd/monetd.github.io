@@ -31,3 +31,6 @@ _site
 # Directory
 test/
 docs/
+
+# vscode
+.vscode/
