@@ -1,6 +1,6 @@
 ---
 title: "Python List Comprehension, Iterator, Generator"
-excerpt: ""
+excerpt: "최근 Generator, yield 에 대한 글을 읽고 개인적으로 정리하려다가 이런 표현식들을 한번에 정리해놓으려고 한다."
 toc: true
 toc_sticky: true
 categories:
