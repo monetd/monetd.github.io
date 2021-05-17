@@ -23,11 +23,7 @@ name                     : "monetd"
 description              : "공부해서 남주자"
 url                      : "https://monetd.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-<<<<<<< HEAD
-repository               : "monetd/monetd.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes
-=======
 repository               : "monetd/monetd.github.io"  # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes
->>>>>>> f8980e8065093713e0cf7c56718dfe9646137512
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : #
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -47,15 +43,8 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-<<<<<<< HEAD
-    theme                : "github-light"
-      # "github-light" (default), "github-dark"
-    issue_term           : "pathname"
-      # "pathname" (default)
-=======
     theme                : "github-light" # (default), "github-dark"
     issue_term           : "pathname"     # (default)
->>>>>>> f8980e8065093713e0cf7c56718dfe9646137512
   staticman:
     branch               : # "master"
     endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
