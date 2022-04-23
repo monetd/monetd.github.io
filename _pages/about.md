@@ -2,6 +2,7 @@
 layout: single
 title: About me
 permalink: /about/
+published: true
 ---
 ## Who am I?
 IT 정보보안 업무를 하고 있습니다.
