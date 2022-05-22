@@ -30,7 +30,16 @@ last_modified_at: 2022-05-21
 |Appender|로그의 출력위치를 결정|로그 기록|
 |Layout|로그가 어떤 형식으로 출력될 것인지 결졍|로그 포맷팅|
 
+이러한 로깅 프레임워크가 어떻게 컴퓨터 역사상 최악의 취약점이 되었던 것일까?
+
 ## History
+
+![jndi_lookup_plugin_support](/assets/images/2022/2022-05-22-13-23-54.png)
+
+2017년 7월 13일 [Lookup 플러그인에 JNDI를 추가하는 이슈](https://issues.apache.org/jira/browse/LOG4J2-313){: target="_blank"}를 통해 Log4j_2.0-beta9에 최초로 취약점이 발생하게 되었다.
+이후 2021년 11월 31일까지 알리바바의 클라우드 보안팀에 의해 해당 취약점이 발견되기 전까지 약 8년이라는 기간동안 해당 취약점은 방치되게 된다.
+
+![alibaba_cloud_tweet](/assets/images/2022/2022-05-22-13-28-22.png)
 
 ### Log4j Lookups
 
