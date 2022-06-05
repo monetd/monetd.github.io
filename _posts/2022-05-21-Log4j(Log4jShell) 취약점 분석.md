@@ -209,7 +209,7 @@ LDAP 서버에서는 정상적으로 명령어를 받았고
 docker exec vulnerable-app ls -l /tmp
 ```
 
-![vul_log4j_touch_pwned](.assets/images/2022/2022-06-05-20-02-17.png)
+![vul_log4j_touch_pwned](/assets/images/2022/2022-06-05-20-02-17.png)
 
 취약한 Log4j 컨테이너의 /tmp 폴더에 pwned 라는 파일이 root 권한으로 생성된 것을 확인할 수 있다.
 Reverse Shell의 명령어를 실행하였다면 해당 서버 전체를 탈취한 것이나 마찬가지일 것이다.
