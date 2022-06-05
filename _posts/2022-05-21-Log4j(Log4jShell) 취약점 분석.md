@@ -1,6 +1,8 @@
 ---
 title: "Log4j(Log4Shell) 취약점 분석"
 excerpt: "작년말을 뜨겁게 달구었던 Log4j(Log4jshell) 취약점에 대한 내용을 포스팅하려고 한다."
+toc: true
+toc_sticky: true
 categories:
   - Security
 tags:
