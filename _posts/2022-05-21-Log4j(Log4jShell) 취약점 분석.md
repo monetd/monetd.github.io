@@ -1,6 +1,8 @@
 ---
 title: "Log4j(Log4Shell) 취약점 분석"
 excerpt: "작년말을 뜨겁게 달구었던 Log4j(Log4jshell) 취약점에 대한 내용을 포스팅하려고 한다."
+toc: true
+toc_sticky: true
 categories:
   - Security
 tags:
@@ -52,7 +54,7 @@ last_modified_at: 2022-05-21
 logger.info("This is test log for example of lookups - ${java:runtime}");
 ```
 
-```java
+```
 This is test log for example of lookups - Java(TM) SE Runtime Environment (build 11.0.13+10-LTS-370) from Oracle Corporation
 ```
 
